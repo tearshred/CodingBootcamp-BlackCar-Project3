@@ -22,7 +22,7 @@ class Faqs extends Component {
                     <Col size="md-12">
                         <Jumbotron>
                             <h1>
-                                {this.state.book.title} by {this.state.book.author}
+                                {this.state.book.title} Jepse! {this.state.book.author}
                             </h1>
                         </Jumbotron>
                     </Col>
