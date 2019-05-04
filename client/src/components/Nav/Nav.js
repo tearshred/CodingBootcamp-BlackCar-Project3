@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "./nav.css";
 
 class Nav extends Component {
   state = {
@@ -48,7 +48,7 @@ class Nav extends Component {
           <span className="navbar-toggler-icon" />
         </button>
         <div className={`${this.state.open ? "" : "collapse "}navbar-collapse `} id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link
                 onClick={this.toggleNav}
@@ -92,6 +92,15 @@ class Nav extends Component {
                 to="/faqs"
               >
                 FAQS
+              </Link>
+            </li>
+            <li className="nav-item login">
+              <Link
+                onClick={this.toggleNav}
+                className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                to="/login"
+              >
+                Login
               </Link>
             </li>
           </ul>
