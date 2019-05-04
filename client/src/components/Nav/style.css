@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+.navbar-nav .nav-link > .active > li > a, 
+.navbar-nav .nav-link > .active > li > a:focus, 
+.navbar-nav .nav-link > .active > li > a:hover {
+    color: #fff;
+    background-color: #39CCCC;
+}
+.navbar-nav > li > a:focus, 
+.navbar-nav > li > a:hover {
+    color: #fff !important;
+    background-color: #39CCCC;
+}
+.navbar-nav > li > a {
+    color: #777 !important;
+    font-family: "Raleway",sans-serif;
+    font-size: 18px;
+    position: relative;
+    display: block;
+    float: right;
+    padding: 10px 15px !important;
+}
+
+.navbar .navbar-brand {
+    color: #777;
+    font-family: "Raleway",sans-serif;
+    font-size: 28px;
+    margin: 0 24px;
+}
+
+@media (min-width: 1156px){
+.navbar {
+ width: 1140px;
+}
+}
