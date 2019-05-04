@@ -15,8 +15,7 @@ module.exports = function (app) {
         zipcode: req.params.zipcode,
       }
     }).then(function (dbPrice) {
-      var price = res.json(dbPrice);
-      console.log(price);
+      console.log(res.json(dbPrice));
     });
   });
 }
