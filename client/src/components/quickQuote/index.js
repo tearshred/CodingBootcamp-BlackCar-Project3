@@ -1,1 +1,1 @@
-export { default } from "./quickQuote";
+export { default } from "./QuickQuote";
