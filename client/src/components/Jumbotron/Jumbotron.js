@@ -1,13 +1,13 @@
 import React from "react";
 import "./jumbotron.css";
-import quickQuote from "../quickQuote";
+import QuickQuote from "../quickQuote";
 
-function Jumbotron() {
+const Jumbotron = () => {
   return (
     <div style={{ height: 400, clear: "both", paddingTop: 120, textAlign: "center" }}
       className="jumbotron">
       
-      <quickQuote />
+      <QuickQuote />
     </div>
   );
 }
