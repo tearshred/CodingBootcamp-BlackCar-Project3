@@ -31,6 +31,10 @@
     display: block;
     float: right;
     padding: 10px 15px !important;
+
+}
+.navbar-collapse > .navbar-nav{
+    align-items: center !important;
 }
 .login {
     background-color:#232323 !important;
