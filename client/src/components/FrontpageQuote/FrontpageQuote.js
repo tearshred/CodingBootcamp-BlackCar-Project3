@@ -9,7 +9,7 @@ import Select from '@material-ui/core/Select';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 
 
-import "./quickQuote.css";
+import "./FrontpageQuote.css";
 
 const destinations = [
     {
@@ -30,7 +30,7 @@ const destinations = [
     },
 ];
 
-const quickQuote = () => {
+const FrontpageQuote = () => {
     return (
         <div className="quickQuote">
             <p>Please enter your ZIP code for a quick quote</p>
@@ -59,4 +59,4 @@ const quickQuote = () => {
     )
 }
 
-export default quickQuote;
+export default FrontpageQuote;
