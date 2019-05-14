@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import Checkout from '../components/Checkout';
 
 class Booking extends Component {
   render() {
     return (
-        <div>
-          <h2>Booking</h2>
-        </div>
+      <Checkout />
     );
   }
 }
