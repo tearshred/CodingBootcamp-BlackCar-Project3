@@ -11,6 +11,7 @@ import banner from './banner_main.png';
 import city from './city-24px.svg';
 import airplane from './airplane-24px.svg';
 import clock from './clock-24px.svg';
+
 const useStyles = makeStyles(theme => ({
   '@global': {
     strong: {
@@ -95,9 +96,12 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(6, 0),
   },
 }));
+
+
 export default function Home() {
   const classes = useStyles();
   const currentYear = new Date().getFullYear();
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -135,6 +139,7 @@ export default function Home() {
         </Paper>
         {/* End main featured post */}
       </main>
+
       {/* Services */}
       <section className={classes.root}>
         <Container className={classes.container}>
@@ -206,6 +211,7 @@ export default function Home() {
         </Container>
       </section>
       {/* End of Services */}
+
       {/* Footer */}
       <footer className={classes.footer}>
         <Container maxWidth="lg">

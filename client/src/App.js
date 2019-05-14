@@ -11,19 +11,19 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path='#services' component={Home} />
-          <Route exact path='#contact' component={Home} />
-          <Route exact path="/booking" component={Booking} />
-          <Route exact path="/faqs" component={Faqs} />
-          <Route exact path="/signin" component={SignIn} />
-          <Route exact path="/signup" component={SignUp} />
-        </Switch>
-      </div>
-    </Router>
+    <div>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path='#services' component={Home} />
+        <Route exact path='#contact' component={Home} />
+        <Route exact path="/booking" component={Booking} />
+        <Route exact path="/faqs" component={Faqs} />
+        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/signup" component={SignUp} />
+      </Switch>
+    </div>
+  </Router>
   );
 }
 
