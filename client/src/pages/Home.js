@@ -1,33 +1,16 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import CityIcon from '@material-ui/icons/LocationCity';
-import AirplaneIcon from '@material-ui/icons/AirplanemodeActive';
-import ClockIcon from '@material-ui/icons/Schedule';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
-import Banner from '../img/banner_main.png'
-
-function MadeWithLove() {
-  return (
-    <Typography variant="subtitle1" color="textSecondary" align="center">
-      {'Developed by '}
-      <Link color="inherit" href="http://www.qbickle.com/">
-        Qbickle Web Solutions
-      </Link>
-      {' team.'}
-    </Typography>
-  );
-}
-
+import Box from '@material-ui/core/Box';
+import banner from './banner_main.png';
+import city from './city-24px.svg';
+import airplane from './airplane-24px.svg';
+import clock from './clock-24px.svg';
 const useStyles = makeStyles(theme => ({
   '@global': {
     strong: {
@@ -36,10 +19,9 @@ const useStyles = makeStyles(theme => ({
   },
   mainFeaturedPost: {
     position: 'relative',
-    backgroundColor: theme.palette.grey[800],
+    backgroundColor: theme.palette.grey[500],
     color: theme.palette.common.white,
-    marginBottom: theme.spacing(4),
-    backgroundImage: 'url(../img/banner_main.png)',
+    backgroundImage: 'url(./banner_main.png)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -51,88 +33,85 @@ const useStyles = makeStyles(theme => ({
     bottom: 0,
     right: 0,
     left: 0,
-    backgroundColor: 'rgba(0,0,0,.3)',
+    backgroundColor: 'rgba(0,0,0,.2)',
   },
   mainFeaturedPostContent: {
     position: 'relative',
+    textAlign: 'center',
+    justifyContent: 'auto',
     padding: theme.spacing(3),
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(6),
     },
   },
-  mainGrid: {
-    marginTop: theme.spacing(3),
-  },
-  link: {
-    margin: theme.spacing(1, 1.5),
-  },
   heroContent: {
     padding: theme.spacing(8, 0, 6),
   },
-  cardHeader: {
-    backgroundColor: theme.palette.grey[200],
+  buttonHero: {
+    marginTop: theme.spacing(4),
+    minWidth: 220,
   },
-  cardPricing: {
+  root: {
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'baseline',
-    marginBottom: theme.spacing(2),
+    overflow: 'hidden',
+    backgroundColor: theme.palette.grey[200],
+    borderBottom: `1px solid ${theme.palette.divider}`,
+  },
+  container: {
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  items: {
+    marginTop: theme.spacing(8),
+  },
+  item: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: theme.spacing(0, 5),
+  },
+  image: {
+    height: 60,
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+  },
+  title: {
+    textAlign: "center",
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5),
+  },
+  button: {
+    marginTop: theme.spacing(8),
+    minWidth: 240,
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(3),
     padding: theme.spacing(6, 0),
   },
 }));
-
-const tiers = [
-  {
-    title: 'Charter Ride Booking',
-    subheader: 'Point-to-Point Reservations',
-    description: ['Going to a business meeting or simply visiting the area? Just tell us where to pick you up and drop you off, and our team of professional drivers will take care of the rest. You just sit back and enjoy the ride.'],
-    buttonText: 'Book now',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Airport Transportation',
-    subheader: 'Meet-and-Greet Service',
-    description: [
-      'Whether you need to get to San Diego International Airport, Cruise ship terminal, LAX or CBX, you can count on us to get you there safely and on time.For other smaller airports in our service area, feel free to contact us and we will be more than happy to help you out.'
-    ],
-    buttonText: 'Book now',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Hourly Charters',
-    subheader: 'Hourly Cruise Around Town',
-    description: [
-      'Perfect for your date night. Embark on a luxurious journey at competitive prices. No need to rely on ride sharing or taxi services. Our fleet will take you to your destination and wait for you patiently. Book your personal chauffeur for the day.'
-    ],
-    buttonText: 'Book now',
-    buttonVariant: 'contained',
-  },
-];
-
 export default function Home() {
   const classes = useStyles();
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   return (
     <React.Fragment>
       <CssBaseline />
       <main>
         {/* Main featured post */}
         <Paper className={classes.mainFeaturedPost}>
-          {/* Increase the priority of the hero background image */}
-          {
-            <img
-              style={{ display: 'none' }}
-              src={Banner}
-              alt="background"
-            />
-          }
+          <img
+            style={{ display: 'inline' }}
+            src={banner}
+            alt="background"
+          />
           <div className={classes.overlay} />
           <Grid container>
-            <Grid item md={6}>
+            <Grid item md={12}>
               <div className={classes.mainFeaturedPostContent}>
                 <Typography component="h1" variant="h2" color="inherit" gutterBottom>
                   Book Your Black Car Now
@@ -140,83 +119,111 @@ export default function Home() {
                 <Typography variant="h5" color="inherit" paragraph>
                   We offer Ariport and Charter transportation all over San Diego county.
                   </Typography>
-                <Link variant="h6" href="/booking">
-                  Book now...
-                  </Link>
+                <Button
+                  color="primary"
+                  size="large"
+                  variant="contained"
+                  className={classes.buttonHero}
+                  component="a"
+                  href="/booking"
+                >
+                  BOOK NOW
+                </Button>
               </div>
             </Grid>
           </Grid>
         </Paper>
         {/* End main featured post */}
       </main>
-
-      {/* Hero unit */}
-      <Container maxWidth="sm" component="main" className={classes.heroContent}>
-        <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-          Services
+      {/* Services */}
+      <section className={classes.root}>
+        <Container className={classes.container}>
+          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+            Services
         </Typography>
-        <Typography variant="h4" align="center" color="textSecondary" component="p">
-          Book your Black Car today
+          <Typography variant="h4" align="center" color="textPrimary" component="p">
+            Book Your Black Car Today
         </Typography>
-      </Container>
-      {/* End hero unit */}
-
-      <Container maxWidth="md" component="main">
-        <Grid container spacing={6} alignItems="center">
-          {tiers.map(tier => (
-            // Enterprise card is full width at sm breakpoint
-            <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
-              <Card>
-                <CardHeader
-                  title={tier.title}
-                  subheader={tier.subheader}
-                  titleTypographyProps={{ align: 'center' }}
-                  subheaderTypographyProps={{ align: 'center' }}
-                  action={tier.title === 'Charter Ride Booking' ? <CityIcon /> : null}
-                  action={tier.title === 'Airport Transportation' ? <AirplaneIcon /> : null}
-                  action={tier.title === 'Hourly Charters' ? <ClockIcon /> : null}
-                  className={classes.cardHeader}
-                />
-                <CardContent>
-                  <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h3" color="textPrimary">
-                      ${tier.price}
-                    </Typography>
-                  </div>
-                  <ul>
-                    {tier.description.map(line => (
-                      <Typography component="li" variant="subtitle1" align="center" key={line}>
-                        {line}
-                      </Typography>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant} color="primary">
-                    {tier.buttonText}
-                  </Button>
-                </CardActions>
-              </Card>
+          <div className={classes.items}>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <div className={classes.item}>
+                  <img
+                    className={classes.image}
+                    src={city}
+                    alt="city"
+                  />
+                  <Typography variant="h4" className={classes.title}>
+                    Charter Ride Booking
+                  </Typography>
+                  <Typography variant="h5" align="center">
+                    {'Going to a business meeting or simply visiting the area? Just tell us where to pick you up and drop you off, and our team of professional drivers will take care of the rest. You just sit back and enjoy the ride.'}
+                  </Typography>
+                </div>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <div className={classes.item}>
+                  <img
+                    className={classes.image}
+                    src={airplane}
+                    alt="airplane"
+                  />
+                  <Typography variant="h4" className={classes.title}>
+                    Airport Transportation
+                  </Typography>
+                  <Typography variant="h5" align="center">
+                    {'Whether you need to get to San Diego International Airport, Cruise ship terminal, LAX or CBX, you can count on us to get you there safely and on time.For other smaller airports in our service area, feel free to contact us and we will be more than happy to help you out.'}
+                  </Typography>
+                </div>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <div className={classes.item}>
+                  <img
+                    className={classes.image}
+                    src={clock}
+                    alt="clock"
+                  />
+                  <Typography variant="h4" className={classes.title}>
+                    Hourly Charter Around Town
+                </Typography>
+                  <Typography variant="h5" align="center">
+                    {'Perfect for your date night. Embark on a luxurious journey at competitive prices. No need to rely on ride sharing or taxi services. Our fleet will take you to your destination and wait for you patiently. Book your personal chauffeur for the day.'}
+                  </Typography>
+                </div>
+              </Grid>
             </Grid>
-          ))}
-        </Grid>
-      </Container>
-
+          </div>
+          <Button
+            color="primary"
+            size="large"
+            variant="contained"
+            className={classes.button}
+            component="a"
+            href="/booking"
+          >
+            BOOK NOW
+          </Button>
+        </Container>
+      </section>
+      {/* End of Services */}
       {/* Footer */}
       <footer className={classes.footer}>
         <Container maxWidth="lg">
           <Typography variant="h4" align="center" gutterBottom>
             San Diego Airport Transportation
           </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          <Typography variant="h6" align="center" color="textSecondary" component="p">
             8880 Villa La Jolla Dr Unit 302, La Jolla, CA 92037
           </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          <Typography variant="h6" align="center" color="textSecondary" component="p">
             © {currentYear} Naissus LLC
           </Typography>
-          <br />
-          <MadeWithLove />
         </Container>
+        <Box mt={5}>
+      <Typography variant="body2" color="textSecondary" align="center">
+      {'Developed by Bojan & Veselin.'}
+      </Typography>
+      </Box>
       </footer>
       {/* End footer */}
     </React.Fragment>
