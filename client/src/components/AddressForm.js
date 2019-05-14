@@ -164,7 +164,6 @@ class AddressForm extends React.Component {
             </React.Fragment>
         );
     }
-
 }
 
 AddressForm.propTypes = {
