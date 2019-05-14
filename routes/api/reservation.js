@@ -12,7 +12,7 @@ module.exports = function (app) {
       attributes: [destination],
       // Selects the appropriate zip code
       where: {
-        zipcode: req.params.zipcode,
+        zipCode: req.params.zipCode,
       }
     }).then(function (dbPrice) {
       console.log(res.json(dbPrice));
