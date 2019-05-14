@@ -51,6 +51,10 @@ const useStyles = makeStyles(theme => ({
   buttonHero: {
     marginTop: theme.spacing(4),
     minWidth: 220,
+    borderRadius: 0,
+      '&:hover': {
+        borderRadius: 3,
+      }, 
   },
   root: {
     display: 'flex',
@@ -88,6 +92,10 @@ const useStyles = makeStyles(theme => ({
   button: {
     marginTop: theme.spacing(8),
     minWidth: 240,
+    borderRadius: 0,
+      '&:hover': {
+        borderRadius: 3,
+      }, 
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
