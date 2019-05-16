@@ -153,7 +153,7 @@ class Checkout extends React.Component {
                                             onClick={this.handleNext}
                                             className={classes.button}
                                         >
-                                            {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                                            {activeStep === steps.length - 1 ? 'Book Now' : 'Next'}
                                         </Button>
                                     </div>
                                 </React.Fragment>
