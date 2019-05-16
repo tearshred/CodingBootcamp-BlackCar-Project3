@@ -53,7 +53,7 @@ export default function Navbar() {
             <Link variant="button" color="textPrimary" href="#services" className={classes.link}>
               Services
             </Link>
-            <Link variant="button" color="textPrimary" href="#contact" className={classes.link}>
+            <Link variant="button" color="textPrimary" href="/contact" className={classes.link}>
               Contact
             </Link>
             <Link variant="button" color="textPrimary" href="/booking" className={classes.link}>
