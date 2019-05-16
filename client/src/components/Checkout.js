@@ -52,43 +52,90 @@ const styles = theme => ({
     },
 });
 
-const steps = ['Pick Up Address', 'Select Your Vehicle', 'Payment Details', 'Review Your Order'];
+// const steps = ['Pick Up Address', 'Select Your Vehicle', 'Payment Details', 'Review Your Order'];
 
-const getStepContent = (step) => {
-    switch (step) {
-        case 0:
-            return (
-                <div>
-                    <AddressForm />
-                </div>
-            )
-        case 1:
-            return (
-                <div>
-                    <SelectCar />
-                </div>
-            )
-        case 2:
-            return (
-                <div>
-                    <PaymentForm />
-                </div>
-            )
-        case 3:
-            return (
-                <div>
-                    <Review />
-                </div>
-            )
-        default:
-            throw new Error('Unknown step');
-    }
-}
+// const getStepContent = (step) => {
+//     switch (step) {
+//         case 0:
+//             return (
+//                 <div>
+//                     <AddressForm
+//                         {...this.state}
+//                     />
+//                 </div>
+//             )
+//         case 1:
+//             return (
+//                 <div>
+//                     <SelectCar />
+//                 </div>
+//             )
+//         case 2:
+//             return (
+//                 <div>
+//                     <PaymentForm />
+//                 </div>
+//             )
+//         case 3:
+//             return (
+//                 <div>
+//                     <Review />
+//                 </div>
+//             )
+//         default:
+//             throw new Error('Unknown step');
+//     }
+// }
 
 class Checkout extends React.Component {
     state = {
         activeStep: 0,
+        firstName: '',
+        lastName: '',
+        addressLine1: '',
+        addressLine2: '',
+        city: '',
+        stateProvince: '',
+        zipCode: '',
+        country: '',
+        destination: '',
+        labelWidth: 0,
     };
+
+    getStepContent = (step) => {
+        switch (step) {
+            case 0:
+                return (
+                    <div>
+                        <AddressForm
+                            {...this.state}
+                            {...this.state.value}
+                            handleChange={this.handleChange}
+                        />
+                    </div>
+                )
+            case 1:
+                return (
+                    <div>
+                        <SelectCar />
+                    </div>
+                )
+            case 2:
+                return (
+                    <div>
+                        <PaymentForm />
+                    </div>
+                )
+            case 3:
+                return (
+                    <div>
+                        <Review />
+                    </div>
+                )
+            default:
+                throw new Error('Unknown step');
+        }
+    }
 
     handleNext = () => {
         this.setState(state => ({
@@ -108,10 +155,20 @@ class Checkout extends React.Component {
         });
     };
 
+    
+    handleChange = event => {
+        console.log('this is working')
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value,
+        });
+    };
+
     render() {
         const { classes } = this.props;
         const { activeStep } = this.state;
-
+        const steps = ['Pick Up Address', 'Select Your Vehicle', 'Payment Details', 'Review Your Order'];
+        
         return (
             <React.Fragment>
                 <CssBaseline />
@@ -140,7 +197,7 @@ class Checkout extends React.Component {
                                 </React.Fragment>
                                 ) : (
                                 <React.Fragment>
-                                    {getStepContent(activeStep)}
+                                    {this.getStepContent(activeStep)}
                                     <div className={classes.buttons}>
                                         {activeStep !== 0 && (
                                             <Button onClick={this.handleBack} className={classes.button}>
