@@ -30,7 +30,7 @@ function Faqs() {
 
   return (
     <div className={classes.root}>
-      <Typography className={classes.title} component="h1" variant="h2" align="center" color="textPrimary">
+      <Typography className={classes.title} component="h2" variant="h2" align="center" color="textPrimary">
         Frequently Asked Questions
         </Typography>
       <ExpansionPanel>

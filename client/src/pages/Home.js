@@ -7,10 +7,11 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
-import banner from './banner_main.png';
-import city from './city-24px.svg';
-import airplane from './airplane-24px.svg';
-import clock from './clock-24px.svg';
+import ContactHero from '../components/ContactHero';
+import banner from './assets/images/banner_main.png';
+import city from './assets/images/city-24px.svg';
+import airplane from './assets/images/airplane-24px.svg';
+import clock from './assets/images/clock-24px.svg';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -22,11 +23,6 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     backgroundColor: theme.palette.grey[500],
     color: theme.palette.common.white,
-    backgroundImage: 'url(./banner_main.png)',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    minHeight: 550,
   },
   overlay: {
     position: 'absolute',
@@ -34,19 +30,17 @@ const useStyles = makeStyles(theme => ({
     bottom: 0,
     right: 0,
     left: 0,
-    backgroundColor: 'rgba(0,0,0,.2)',
+    backgroundColor: 'rgba(0,0,0,.3)',
   },
   mainFeaturedPostContent: {
     position: 'relative',
     textAlign: 'center',
     justifyContent: 'auto',
     padding: theme.spacing(3),
+    marginTop: '-180px',
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(6),
     },
-  },
-  heroContent: {
-    padding: theme.spacing(8, 0, 6),
   },
   buttonHero: {
     marginTop: theme.spacing(4),
@@ -99,7 +93,8 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing(5),
+    borderTop: `2px solid ${theme.palette.divider}`,
+    marginTop: theme.spacing(4),
     marginBottom: theme.spacing(3),
     padding: theme.spacing(6, 0),
   },
@@ -116,16 +111,16 @@ export default function Home() {
       <main>
         {/* Main featured post */}
         <Paper className={classes.mainFeaturedPost}>
-          <img
-            style={{ display: 'inline' }}
+           <img
+            style={{ width: '100%' }}
             src={banner}
             alt="background"
-          />
+          /> 
           <div className={classes.overlay} />
-          <Grid container>
+          <Grid>
             <Grid item md={12}>
               <div className={classes.mainFeaturedPostContent}>
-                <Typography component="h1" variant="h2" color="inherit" gutterBottom>
+                <Typography component="h1" variant="h2" color="inherit" gutterBottom fontWeightNormal>
                   Book Your Black Car Now
                   </Typography>
                 <Typography variant="h5" color="inherit" paragraph>
@@ -219,6 +214,8 @@ export default function Home() {
         </Container>
       </section>
       {/* End of Services */}
+      
+      <ContactHero />
 
       {/* Footer */}
       <footer className={classes.footer}>
@@ -227,7 +224,7 @@ export default function Home() {
             San Diego Airport Transportation
           </Typography>
           <Typography variant="h6" align="center" color="textSecondary" component="p">
-            8880 Villa La Jolla Dr Unit 302, La Jolla, CA 92037
+            Phone: (619) 254-9269  |  Location: La Jolla, CA 92037
           </Typography>
           <Typography variant="h6" align="center" color="textSecondary" component="p">
             © {currentYear} Naissus LLC
