@@ -37,28 +37,19 @@ const styles = theme => ({
     },
 });
 
-class AddressForm extends React.Component {
+export class AddressForm extends React.Component {
 
     state = {
-        firstName: '',
-        lastName: '',
-        addressLine1: '',
-        addressLine2: '',
-        city: '',
-        stateProvince: '',
-        zipCode: '',
-        country: '',
-        destination: '',
-        labelWidth: 0,
+        firstName: this.props.firstName,
+        lastName: this.props.lastName,
+        addressLine1: this.props.addressLine1,
+        addressLine2: this.props.addressLine2,
+        city: this.props.city,
+        stateProvince: this.props.stateProvince,
+        zipCode: this.props.zipCode,
+        country: this.props.country,
+        destination: this.props.destination,
     }
-
-    handleChange = event => {
-        console.log('this is working')
-        const { name, value } = event.target;
-        this.setState({
-            [name]: value,
-        });
-    };
 
     render() {
 
@@ -78,8 +69,8 @@ class AddressForm extends React.Component {
                             label="First name"
                             fullWidth
                             autoComplete="fname"
-                            value={this.state.firstName}
-                            onChange={this.handleChange}
+                            value={this.props.firstName}
+                            onChange={this.props.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
@@ -90,8 +81,8 @@ class AddressForm extends React.Component {
                             label="Last name"
                             fullWidth
                             autoComplete="lname"
-                            value={this.state.lastName}
-                            onChange={this.handleChange}
+                            value={this.props.lastName}
+                            onChange={this.props.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12}>
@@ -102,8 +93,8 @@ class AddressForm extends React.Component {
                             label="Address line 1"
                             fullWidth
                             autoComplete="billing address-line1"
-                            value={this.state.addressLine1}
-                            onChange={this.handleChange}
+                            value={this.props.addressLine1}
+                            onChange={this.props.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12}>
@@ -113,8 +104,8 @@ class AddressForm extends React.Component {
                             label="Address line 2"
                             fullWidth
                             autoComplete="billing address-line2"
-                            value={this.state.addressLine2}
-                            onChange={this.handleChange}
+                            value={this.props.addressLine2}
+                            onChange={this.props.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
@@ -125,8 +116,8 @@ class AddressForm extends React.Component {
                             label="City"
                             fullWidth
                             autoComplete="billing address-level2"
-                            value={this.state.city}
-                            onChange={this.handleChange}
+                            value={this.props.city}
+                            onChange={this.props.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
@@ -135,8 +126,8 @@ class AddressForm extends React.Component {
                             name="stateProvince"
                             label="State/Province/Region"
                             fullWidth
-                            value={this.state.stateProvince}
-                            onChange={this.handleChange}
+                            value={this.props.stateProvince}
+                            onChange={this.props.handleChange}
                             />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
@@ -147,8 +138,8 @@ class AddressForm extends React.Component {
                             label="Zip / Postal code"
                             fullWidth
                             autoComplete="billing postal-code"
-                            value={this.state.zipCode}
-                            onChange={this.handleChange}
+                            value={this.props.zipCode}
+                            onChange={this.props.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
@@ -159,8 +150,8 @@ class AddressForm extends React.Component {
                             label="Country"
                             fullWidth
                             autoComplete="billing country"
-                            value={this.state.country}
-                            onChange={this.handleChange}
+                            value={this.props.country}
+                            onChange={this.props.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12}>
@@ -174,8 +165,8 @@ class AddressForm extends React.Component {
                             Destination
                         </InputLabel>
                         <Select
-                            value={this.state.destination}
-                            onChange={this.handleChange}
+                            value={this.props.destination}
+                            onChange={this.props.handleChange}
                             input={<Input name="destination" id="age-label-placeholder" />}
                             displayEmpty
                             name="destination"
