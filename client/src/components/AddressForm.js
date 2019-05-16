@@ -40,15 +40,23 @@ const styles = theme => ({
 class AddressForm extends React.Component {
 
     state = {
-        age: '',
-        name: '',
+        firstName: '',
+        lastName: '',
+        addressLine1: '',
+        addressLine2: '',
+        city: '',
+        stateProvince: '',
+        zipCode: '',
+        country: '',
+        destination: '',
         labelWidth: 0,
     }
 
     handleChange = event => {
         console.log('this is working')
+        const { name, value } = event.target;
         this.setState({
-            name: event.target.value,
+            [name]: value,
         });
     };
 
@@ -60,7 +68,7 @@ class AddressForm extends React.Component {
             <React.Fragment>
                 <Typography variant="h6" gutterBottom>
                     Your Information
-          </Typography>
+                </Typography>
                 <Grid container spacing={24}>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
                         <TextField
@@ -70,6 +78,8 @@ class AddressForm extends React.Component {
                             label="First name"
                             fullWidth
                             autoComplete="fname"
+                            value={this.state.firstName}
+                            onChange={this.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
@@ -80,25 +90,31 @@ class AddressForm extends React.Component {
                             label="Last name"
                             fullWidth
                             autoComplete="lname"
+                            value={this.state.lastName}
+                            onChange={this.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12}>
                         <TextField
                             required
                             id="address1"
-                            name="address1"
+                            name="addressLine1"
                             label="Address line 1"
                             fullWidth
                             autoComplete="billing address-line1"
+                            value={this.state.addressLine1}
+                            onChange={this.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12}>
                         <TextField
                             id="address2"
-                            name="address2"
+                            name="addressLine2"
                             label="Address line 2"
                             fullWidth
                             autoComplete="billing address-line2"
+                            value={this.state.addressLine2}
+                            onChange={this.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
@@ -109,19 +125,30 @@ class AddressForm extends React.Component {
                             label="City"
                             fullWidth
                             autoComplete="billing address-level2"
+                            value={this.state.city}
+                            onChange={this.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
-                        <TextField id="state" name="state" label="State/Province/Region" fullWidth />
+                        <TextField 
+                            id="stateProvince"
+                            name="stateProvince"
+                            label="State/Province/Region"
+                            fullWidth
+                            value={this.state.stateProvince}
+                            onChange={this.handleChange}
+                            />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
                         <TextField
                             required
                             id="zip"
-                            name="zip"
+                            name="zipCode"
                             label="Zip / Postal code"
                             fullWidth
                             autoComplete="billing postal-code"
+                            value={this.state.zipCode}
+                            onChange={this.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
@@ -132,6 +159,8 @@ class AddressForm extends React.Component {
                             label="Country"
                             fullWidth
                             autoComplete="billing country"
+                            value={this.state.country}
+                            onChange={this.handleChange}
                         />
                     </Grid>
                     <Grid className={classes.TextField} item xs={12}>
@@ -143,13 +172,13 @@ class AddressForm extends React.Component {
                     <FormControl item xs={12} sm={6} className={classes.formControl}>
                         <InputLabel  shrink htmlFor="age-label-placeholder">
                             Destination
-        </InputLabel>
+                        </InputLabel>
                         <Select
-                            value={this.state.name}
+                            value={this.state.destination}
                             onChange={this.handleChange}
-                            input={<Input name="age" id="age-label-placeholder" />}
+                            input={<Input name="destination" id="age-label-placeholder" />}
                             displayEmpty
-                            name="age"
+                            name="destination"
                             className={classes.selectEmpty}
                         >
                             <MenuItem value="">

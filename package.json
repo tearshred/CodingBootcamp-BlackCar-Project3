@@ -17,7 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.19.0"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
@@ -26,7 +26,7 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.8.4",
+    "sequelize": "^5.8.6",
     "sequelize-cli": "^5.4.0"
   }
 }
