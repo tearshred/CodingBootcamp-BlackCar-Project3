@@ -11,8 +11,8 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop: theme.spacing(9),
-        marginBottom: theme.spacing(6),
+        marginTop: theme.spacing(8),
+        marginBottom: theme.spacing(5),
     },
     button: {
         border: '4px solid currentColor',
@@ -25,7 +25,7 @@ const styles = theme => ({
         marginBottom: theme.spacing(3),
     },
     image: {
-        height: 80,
+        height: 60,
         marginTop: theme.spacing(1),
         marginBottom: theme.spacing(1),
     },
@@ -37,11 +37,11 @@ function ContactHero(props) {
     return (
         <Container className={classes.root} component="section">
             <Button className={classes.button} href="/contact">
-                <Typography variant="h4" component="span">
+                <Typography variant="h5" component="span">
                 Got any questions?
         </Typography>
             </Button>
-            <Typography variant="h4" align="center" className={classes.link}>
+            <Typography variant="h5" align="center" className={classes.link}>
                 Feel Free To Contact Us. We are here to help.
         </Typography>
             <img
