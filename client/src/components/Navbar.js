@@ -5,6 +5,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import Hidden from '@material-ui/core/Hidden';
+import Drawer from './Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -43,9 +45,11 @@ export default function Navbar() {
       <CssBaseline />
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
-          <Typography variant="h4" color="inherit" noWrap className={classes.toolbarTitle}>
+          <Drawer />
+          <Typography style={{marginLeft: '5px'}} variant="h4" color="inherit" noWrap className={classes.toolbarTitle}>
             Black Car
           </Typography>
+          <Hidden smDown>
           <nav>
             <Link variant="button" color="textPrimary" href="/" className={classes.link}>
               Home
@@ -57,18 +61,21 @@ export default function Navbar() {
               Contact
             </Link>
             <Link variant="button" color="textPrimary" href="/booking" className={classes.link}>
-              Booking Form
+              Booking
             </Link>
             <Link variant="button" color="textPrimary" href="/faqs" className={classes.link}>
               Faq
             </Link>
           </nav>
-          <Button href="/signin" color="primary" variant="outlined" className={classes.link}>
+          </Hidden>
+          <Hidden xsDown>
+          <Button style={{marginRight: '0', marginLeft: '30px'}} href="/signin" color="primary" variant="outlined" className={classes.link}>
             Sign in
           </Button>
-          <Button href="signup" color="primary" variant="outlined" className={classes.link}>
+              <Button style={{marginRight: '0'}} href="/signup" color="primary" variant="outlined" className={classes.link}>
             Sign up
           </Button>
+          </Hidden>
         </Toolbar>
       </AppBar>
     </React.Fragment>
