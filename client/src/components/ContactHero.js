@@ -27,7 +27,6 @@ const styles = theme => ({
     image: {
         height: 60,
         marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(1),
     },
 });
 
@@ -37,7 +36,7 @@ function ContactHero(props) {
     return (
         <Container className={classes.root} component="section">
             <Button className={classes.button} href="/contact">
-                <Typography variant="h5" component="span">
+                <Typography variant="h5" align="center" component="span">
                 Got any questions?
         </Typography>
             </Button>

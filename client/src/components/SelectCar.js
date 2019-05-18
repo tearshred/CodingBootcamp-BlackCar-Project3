@@ -1,17 +1,15 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import sedan from '../pages/assets/images/Sedan.png';
+import suv from '../pages/assets/images/SUV.png';
 
 const styles = theme => ({
     TextField: {
@@ -39,7 +37,7 @@ class SelectCar extends React.Component {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/static/images/cards/image.jpg"
+                                    image={sedan}
                                     title="Executive Sedan"
                                 />
                                 <CardContent>
@@ -52,11 +50,6 @@ class SelectCar extends React.Component {
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
-                            <CardActions>
-                                <Button size="small" color="primary">
-                                    Learn More
-                                </Button>
-                            </CardActions>
                         </Card>
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -64,8 +57,8 @@ class SelectCar extends React.Component {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/static/images/cards/image.jpg"
-                                    title="Executive Sedan"
+                                    image={suv}
+                                    title="Executive SUV"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
@@ -77,11 +70,6 @@ class SelectCar extends React.Component {
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
-                            <CardActions>
-                                <Button size="small" color="primary">
-                                    Learn More
-                                </Button>
-                            </CardActions>
                         </Card>
                     </Grid>
                 </Grid>
