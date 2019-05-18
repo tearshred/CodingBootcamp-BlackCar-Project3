@@ -19,7 +19,7 @@ import SignUpIcon from '@material-ui/icons/PersonAdd';
 
 const useStyles = makeStyles({
     list: {
-        width: 230,
+        width: 240,
     },
 });
 function ListItemLink(props) {
@@ -109,18 +109,10 @@ function Drawer() {
             </List>
             <Divider />
             <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
-                <ListItemLink href="/faqs">
+                <ListItemLink href="/terms">
                     <ListItem button>
                         <ListItemIcon>{<AssignmentIcon />}</ListItemIcon>
-                        <ListItemText primary="Policies" />
-                    </ListItem>
-                </ListItemLink>
-            </List>
-            <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
-                <ListItemLink href="/faqs">
-                    <ListItem button>
-                        <ListItemIcon>{<AssignmentIcon />}</ListItemIcon>
-                        <ListItemText primary="Terms" />
+                        <ListItemText primary="Terms and Policies" />
                     </ListItem>
                 </ListItemLink>
             </List>

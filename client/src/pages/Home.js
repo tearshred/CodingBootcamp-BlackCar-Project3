@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
-import Hidden from '@material-ui/core/Hidden';
 import ContactHero from '../components/ContactHero';
 import banner from './assets/images/banner_main.png';
 import city from './assets/images/city-24px.svg';
@@ -51,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: 220,
     borderRadius: 0,
       '&:hover': {
-        borderRadius: 3,
+        borderRadius: 4,
       }, 
   },
   root: {
@@ -61,45 +60,42 @@ const useStyles = makeStyles(theme => ({
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
   container: {
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(10),
+    marginTop: theme.spacing(7),
+    marginBottom: theme.spacing(8),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   items: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(6),
   },
   item: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: theme.spacing(0, 5),
+    padding: theme.spacing(0, 1),
   },
   image: {
     height: 55,
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(0),
   },
   title: {
     textAlign: "center",
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(4),
   },
   button: {
     marginTop: theme.spacing(8),
     minWidth: 240,
     borderRadius: 0,
       '&:hover': {
-        borderRadius: 3,
+        borderRadius: 4,
       }, 
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
     borderTop: `2px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(4),
-    marginBottom: theme.spacing(3),
     padding: theme.spacing(6, 0),
   },
 }));
@@ -196,10 +192,10 @@ export default function Home() {
                     alt="clock"
                   />
                   <Typography variant="h4" className={classes.title}>
-                    Hourly Charter Around Town
+                    Hourly Charter
                 </Typography>
                   <Typography variant="h6" align="center">
-                    {'Perfect for your date night. Embark on a luxurious journey at competitive prices. No need to rely on ride sharing or taxi services. Our fleet will take you to your destination and wait for you patiently. Book your personal chauffeur for the day.'}
+                    {'Perfect for your date night. Embark on a luxurious journey at competitive prices. No need to rely on ride sharing or taxi services. Our fleet will take you to your destination and wait for you patiently. Book your personal chauffeur for the day around town.'}
                   </Typography>
                 </div>
               </Grid>

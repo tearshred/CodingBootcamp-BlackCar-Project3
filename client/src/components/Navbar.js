@@ -68,7 +68,7 @@ export default function Navbar() {
             </Link>
           </nav>
           </Hidden>
-          <Hidden xsDown>
+          <Hidden only='xs'>
           <Button style={{marginRight: '0', marginLeft: '30px'}} href="/signin" color="primary" variant="outlined" className={classes.link}>
             Sign in
           </Button>
