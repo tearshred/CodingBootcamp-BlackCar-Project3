@@ -46,7 +46,7 @@ class SelectCar extends React.Component {
                                     </Typography>
                                     <Typography component="p">
                                         Book an executive Sedan to the airport.
-                                        <h2> $ </h2>
+                                        <h2>Price ${this.props.sedanPrice}</h2>
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -66,7 +66,7 @@ class SelectCar extends React.Component {
                                     </Typography>
                                     <Typography component="p">
                                         Book an executive SUV to the airport.
-                                        <h2> $ </h2>
+                                        <h2>Price ${this.props.suvPrice}</h2>
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>

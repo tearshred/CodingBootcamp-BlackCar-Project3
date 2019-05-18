@@ -14,6 +14,7 @@ import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 import SelectCar from './SelectCar';
+import API from '../utils/API';
 
 const styles = theme => ({
     appBar: {
@@ -99,6 +100,8 @@ class Checkout extends React.Component {
         zipCode: '',
         country: '',
         destination: '',
+        sedanPrice: '',
+        suvPrice: '',
         labelWidth: 0,
     };
 
@@ -117,7 +120,10 @@ class Checkout extends React.Component {
             case 1:
                 return (
                     <div>
-                        <SelectCar />
+                        <SelectCar 
+                            {...this.state}
+                            {...this.state.value}
+                        />
                     </div>
                 )
             case 2:
@@ -138,9 +144,31 @@ class Checkout extends React.Component {
     }
 
     handleNext = () => {
-        this.setState(state => ({
-            activeStep: state.activeStep + 1,
+        this.setState(prevState => ({
+            activeStep: prevState.activeStep + 1,
         }));
+        switch(this.state.activeStep){
+            case 0: 
+                // Creates an API call for sedan pricing
+                API.getPrice(this.state.zipCode, "sedan" + this.state.destination).then(res => {
+                    let price = res.data;
+
+                    let key = Object.keys(price);
+                    console.log(price[key]);
+                    this.setState({sedanPrice: price[key]});
+                })
+                .catch(err => console.log(err));
+
+                // Creates an API call for SUV pricing
+                API.getPrice(this.state.zipCode, "suv" + this.state.destination).then(res => {
+                    let price = res.data;
+
+                    let key = Object.keys(price);
+                    console.log(res.data)
+                    this.setState({suvPrice: price[key]});
+                })
+                .catch(err => console.log(err));
+        }
     };
 
     handleBack = () => {
