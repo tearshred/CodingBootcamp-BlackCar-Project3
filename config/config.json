@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "Butkamp@2018",
+      "password": "Bootcamp",
       "database": "blackcar",
       "host": "localhost",
       "port": 3306,

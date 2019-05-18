@@ -6,8 +6,8 @@ module.exports = function (app) {
     var destination = req.params.destination;
 
     // Find all zip codes within the MySQL table
-    db.Price.findAll({
-
+    db.Price.findOne({
+      plain: true,
       // Assigns the attribute that serves as a SELECT query in MySQL
       attributes: [destination],
       // Selects the appropriate zip code
@@ -15,8 +15,7 @@ module.exports = function (app) {
         zipcode: req.params.zipcode,
       }
     }).then(function (dbPrice) {
-      var price = res.json(dbPrice);
-      console.log(price);
-    });
+      return res.json(dbPrice);
+    })
   });
 }
