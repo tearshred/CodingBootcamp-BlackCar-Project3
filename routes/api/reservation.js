@@ -3,7 +3,7 @@ var db = require("../../models");
 module.exports = function (app) {
   // Get all prices
   app.post("/api/reservation", function (req, res) {
-    db.Reservation.create(req.body)({
+    db.Reservation.create(req,body)({
       firstName: req.params.firstName,
       lastName: req.params.lastName,
       addressLine1: req.params.addressLine1,
@@ -17,8 +17,9 @@ module.exports = function (app) {
       roundtrip: req.params.roundtrip,
       price: req.params.price,
       reservationNo: req.params.reservationNo
-    }).then(function (dbPrice) {
-      console.log(res.json(dbPrice));
+    }).then(function (dbReservation) {
+      return res.json(dbReservation)
+      console.log(res.json(dbReservation));
     });
   });
 }
