@@ -53,41 +53,6 @@ const styles = theme => ({
     },
 });
 
-// const steps = ['Pick Up Address', 'Select Your Vehicle', 'Payment Details', 'Review Your Order'];
-
-// const getStepContent = (step) => {
-//     switch (step) {
-//         case 0:
-//             return (
-//                 <div>
-//                     <AddressForm
-//                         {...this.state}
-//                     />
-//                 </div>
-//             )
-//         case 1:
-//             return (
-//                 <div>
-//                     <SelectCar />
-//                 </div>
-//             )
-//         case 2:
-//             return (
-//                 <div>
-//                     <PaymentForm />
-//                 </div>
-//             )
-//         case 3:
-//             return (
-//                 <div>
-//                     <Review />
-//                 </div>
-//             )
-//         default:
-//             throw new Error('Unknown step');
-//     }
-// }
-
 class Checkout extends React.Component {
     state = {
         activeStep: 0,
@@ -102,6 +67,8 @@ class Checkout extends React.Component {
         destination: '',
         sedanPrice: '',
         suvPrice: '',
+        rezType: '',
+        fare: '',
         labelWidth: 0,
     };
 
@@ -123,6 +90,7 @@ class Checkout extends React.Component {
                         <SelectCar 
                             {...this.state}
                             {...this.state.value}
+                            carSelection={this.carSelection}
                         />
                     </div>
                 )
@@ -135,7 +103,10 @@ class Checkout extends React.Component {
             case 3:
                 return (
                     <div>
-                        <Review />
+                        <Review 
+                            {...this.state}
+                            {...this.state.value}
+                        />
                     </div>
                 )
             default:
@@ -164,10 +135,26 @@ class Checkout extends React.Component {
                     let price = res.data;
 
                     let key = Object.keys(price);
-                    console.log(res.data)
+                    console.log(price[key])
                     this.setState({suvPrice: price[key]});
                 })
                 .catch(err => console.log(err));
+            case 1:
+                console.log('nothing')
+            case 2:
+                console.log('nothing')
+            case 3:
+                API.bookReservation({
+                    firstName: this.state.firstName,
+                    lastName: this.state.lastName,
+                    addressLine1: this.state.addressLine1,
+                    addressLine2: this.state.addressLine2,
+                    city: this.state.city,
+                    state: this.state.stateProvince,
+                    zip: this.state.zipCode,
+                    destination: this.state.destination,
+                    price: this.state.fare,
+                }).catch(err => console.log(err));
         }
     };
 
@@ -183,6 +170,15 @@ class Checkout extends React.Component {
         });
     };
 
+    carSelection = event => {
+        // Sets the state of the radio button to the one that is clicked and updates the state of the reservation
+        this.setState({
+            rezType: event.target.name,
+        });
+        this.setState({
+            fare: event.target.value,
+        });
+    };
     
     handleChange = event => {
         console.log('this is working')

@@ -10,7 +10,7 @@ export default {
     return axios.get("/api/price/" + zipCode + "/" + destination);
   },
   // Saves a reservation to the database
-  bookReservation: function(reservationData) {
-    return axios.post("/api/reservation", reservationData);
+  bookReservation: function(dbReservation) {
+    return axios.post("/api/reservation", dbReservation);
   }
 };

@@ -10,6 +10,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import sedan from '../pages/assets/images/Sedan.png';
 import suv from '../pages/assets/images/SUV.png';
+import Checkbox from '@material-ui/core/Checkbox';
+import Radio from '@material-ui/core/Radio';
+import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 
 const styles = theme => ({
     TextField: {
@@ -21,6 +25,9 @@ const styles = theme => ({
     media: {
         height: 140,
     },
+    checkBox: {
+        padding: 10,
+    }
 });
 
 class SelectCar extends React.Component {
@@ -33,8 +40,7 @@ class SelectCar extends React.Component {
             <React.Fragment>
                 <Grid container spacing={24}>
                     <Grid item xs={12} sm={6}>
-                        <Card className={classes.card}>
-                            <CardActionArea>
+                        <Card className={classes.card} >
                                 <CardMedia
                                     className={classes.media}
                                     image={sedan}
@@ -48,13 +54,16 @@ class SelectCar extends React.Component {
                                         Book an executive Sedan to the airport.
                                         <h2>Price ${this.props.sedanPrice}</h2>
                                     </Typography>
+                                    <Typography>
+                                        Book Sedan
+                                    <Radio checked={this.props.rezType === 'sedan'} value={this.props.sedanPrice} onChange={this.props.carSelection} name="sedan" color="default">
+                                    </Radio>
+                                    </Typography>
                                 </CardContent>
-                            </CardActionArea>
                         </Card>
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <Card className={classes.card}>
-                            <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
                                     image={suv}
@@ -68,8 +77,12 @@ class SelectCar extends React.Component {
                                         Book an executive SUV to the airport.
                                         <h2>Price ${this.props.suvPrice}</h2>
                                     </Typography>
+                                    <Typography>
+                                        Book SUV
+                                    <Radio checked={this.props.rezType === 'SUV'} value={this.props.suvPrice} onChange={this.props.carSelection} name="SUV" color="default">
+                                    </Radio>
+                                    </Typography>
                                 </CardContent>
-                            </CardActionArea>
                         </Card>
                     </Grid>
                 </Grid>
