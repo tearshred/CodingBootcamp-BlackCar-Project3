@@ -4,19 +4,19 @@ module.exports = function (app) {
   // Get all prices
   app.post("/api/reservation", function (req, res) {
     db.Reservation.create({
-      firstName: req.params.firstName,
-      lastName: req.params.lastName,
-      addressLine1: req.params.addressLine1,
-      addressLine2: req.params.addressLine2,
-      city: req.params.city,
-      state: req.params.state,
-      zip: req.params.zipCode,
-      phoneNo: req.params.phoneNo,
-      email: req.params.email,
-      destination: req.params.destination,
-      roundtrip: req.params.roundtrip,
-      price: req.params.price,
-      reservationNo: req.params.reservationNo
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      addressLine1: req.body.addressLine1,
+      addressLine2: req.body.addressLine2,
+      city: req.body.city,
+      state: req.body.state,
+      zip: req.body.zip,
+      phoneNo: req.body.phoneNo,
+      email: req.body.email,
+      destination: req.body.destination,
+      roundtrip: req.body.roundtrip,
+      price: req.body.price,
+      reservationNo: req.reservationNo
     }).then(function (dbReservation) {
       return res.json(dbReservation)
       console.log(res.json(dbReservation));
