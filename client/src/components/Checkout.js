@@ -139,22 +139,30 @@ class Checkout extends React.Component {
                     this.setState({suvPrice: price[key]});
                 })
                 .catch(err => console.log(err));
+            break
             case 1:
-                console.log('nothing')
+                console.log('nothing');
+            break
             case 2:
-                console.log('nothing')
+                console.log('nothing');
+            break
             case 3:
+                console.log('step 3 clicked')
+                
                 API.bookReservation({
                     firstName: this.state.firstName,
                     lastName: this.state.lastName,
                     addressLine1: this.state.addressLine1,
-                    addressLine2: this.state.addressLine2,
+                    addressLine2: this.state.addressLine2, 
                     city: this.state.city,
                     state: this.state.stateProvince,
                     zip: this.state.zipCode,
                     destination: this.state.destination,
                     price: this.state.fare,
                 }).catch(err => console.log(err));
+            break
+            default: 
+                console.log('over');
         }
     };
 
