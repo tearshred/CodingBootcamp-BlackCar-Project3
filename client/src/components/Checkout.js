@@ -69,6 +69,7 @@ class Checkout extends React.Component {
         suvPrice: '',
         rezType: '',
         fare: '',
+        reservationNo: '',
         labelWidth: 0,
     };
 
@@ -144,7 +145,17 @@ class Checkout extends React.Component {
                 console.log('nothing');
             break
             case 2:
-                console.log('nothing');
+                console.log('Getting the reservation numbers from the database');
+                
+                // Generates a random reservation number
+                const min = Math.ceil(100001);
+                const max = Math.floor(999999);
+                const resGenerator =  Math.floor(Math.random() * (max - min + 1)) + min;
+                this.setState({reservationNo: resGenerator});
+                console.log(this.state.reservationNo);
+                // console.log(reservationNo);
+                console.log(resGenerator);
+
             break
             case 3:
                 console.log('step 3 clicked')
@@ -161,6 +172,7 @@ class Checkout extends React.Component {
                     price: this.state.fare,
                     email: this.state.email,
                     phoneNo: this.state.phoneNo,
+                    reservationNo: this.state.reservationNo,
                 }).catch(err => console.log(err));
             break
             default: 
@@ -225,7 +237,7 @@ class Checkout extends React.Component {
                                         Thank you for your order.
                                     </Typography>
                                     <Typography variant="subtitle1">
-                                        Your reservation number is #2001539. We have emailed your order confirmation, and will
+                                        Your reservation number is #{this.state.reservationNo}. We have emailed your order confirmation, and will
                                         email you a reminder 24 hours ahead.
                                     </Typography>
                                 </React.Fragment>

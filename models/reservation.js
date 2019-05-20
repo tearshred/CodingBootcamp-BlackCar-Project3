@@ -50,9 +50,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         reservationNo: {
             type: DataTypes.STRING,
-            // defaultValue: DataTypes.UUIDV1,
-            // primaryKey: true
-            allowNull: true
+            allowNull: false
         }
     });
 
