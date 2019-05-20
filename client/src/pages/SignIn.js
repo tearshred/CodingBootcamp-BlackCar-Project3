@@ -64,7 +64,7 @@ class SignIn extends React.Component {
         .then(res => {
           // set the token then redirect to the "/mytrips" route
           Auth.setToken(res.data.token);
-          this.props.history.push(`/`)
+          this.props.history.push(`/home`)
         })
         .catch(err => console.log(err));
     }
