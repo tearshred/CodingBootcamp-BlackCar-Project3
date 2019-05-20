@@ -154,10 +154,32 @@ export class AddressForm extends React.Component {
                             onChange={this.props.handleChange}
                         />
                     </Grid>
-                    <Grid className={classes.TextField} item xs={12}>
-                        <FormControlLabel
+                    <Grid className={classes.TextField} item xs={12} sm={6}>
+                        {/* <FormControlLabel
                             control={<Checkbox color="primary" name="saveAddress" value="yes" />}
                             label="Same as billing address"
+                        /> */}
+                        <TextField
+                            required
+                            id="email"
+                            name="email"
+                            label="E-mail"
+                            fullWidth
+                            autoComplete="email"
+                            value={this.props.email}
+                            onChange={this.props.handleChange}
+                        />
+                    </Grid>
+                    <Grid className={classes.TextField} item xs={12} sm={6}>
+                        <TextField
+                            required
+                            id="phoneNo"
+                            name="phoneNo"
+                            label="Phone Number"
+                            fullWidth
+                            autoComplete="phoneNo"
+                            value={this.props.phoneNo}
+                            onChange={this.props.handleChange}
                         />
                     </Grid>
                     <FormControl item xs={12} sm={6} className={classes.formControl}>

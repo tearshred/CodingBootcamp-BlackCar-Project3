@@ -25,16 +25,16 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         zip: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         phoneNo: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         email: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         destination: {
             type: DataTypes.STRING,
@@ -42,16 +42,17 @@ module.exports = function (sequelize, DataTypes) {
         },
         roundtrip: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            allowNull: true
         },
         price: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         reservationNo: {
-            type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV1,
-            primaryKey: true
+            type: DataTypes.STRING,
+            // defaultValue: DataTypes.UUIDV1,
+            // primaryKey: true
+            allowNull: true
         }
     });
 

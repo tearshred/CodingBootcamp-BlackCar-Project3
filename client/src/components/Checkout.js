@@ -63,6 +63,8 @@ class Checkout extends React.Component {
         zipCode: '',
         country: '',
         destination: '',
+        email: '',
+        phoneNo: '',
         sedanPrice: '',
         suvPrice: '',
         rezType: '',
@@ -157,6 +159,8 @@ class Checkout extends React.Component {
                     zip: this.state.zipCode,
                     destination: this.state.destination,
                     price: this.state.fare,
+                    email: this.state.email,
+                    phoneNo: this.state.phoneNo,
                 }).catch(err => console.log(err));
             break
             default: 
