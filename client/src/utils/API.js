@@ -12,5 +12,13 @@ export default {
   // Saves a reservation to the database
   bookReservation: function(dbReservation) {
     return axios.post("/api/reservation", dbReservation);
+  },
+  login: function(loginInfo) {
+    // send user login info to API
+    return axios.post("/api/auth/signin", loginInfo);
+  },
+  signup: function(signupInfo) {
+    // send user signup info to API
+    return axios.post("/api/auth/signup", signupInfo);
   }
 };

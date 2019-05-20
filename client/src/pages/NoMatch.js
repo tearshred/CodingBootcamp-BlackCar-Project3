@@ -19,13 +19,13 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Terms() {
+export default function NoMatch() {
     const classes = useStyles();
 
     return (
         <Container className={classes.container}>
             <Typography variant="h4" align="center" color="textPrimary" component="p">
-            Terms and Policies (coming soon...)
+            404 Page Not Found
             </Typography>
         </Container>
     );

@@ -19,13 +19,13 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Terms() {
+export default function MyTrips() {
     const classes = useStyles();
 
     return (
         <Container className={classes.container}>
             <Typography variant="h4" align="center" color="textPrimary" component="p">
-            Terms and Policies (coming soon...)
+            My Trips section (coming soon...)
             </Typography>
         </Container>
     );

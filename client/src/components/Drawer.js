@@ -83,6 +83,14 @@ function Drawer() {
                 </ListItemLink>
             </List>
             <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
+                <ListItemLink href="/mytrips">
+                    <ListItem button >
+                        <ListItemIcon>{<CardIcon />}</ListItemIcon>
+                        <ListItemText href="/mytrips" primary="My Trips" />
+                    </ListItem>
+                </ListItemLink>
+            </List>
+            <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
                 <ListItemLink href="/faqs">
                     <ListItem button>
                         <ListItemIcon>{<DescriptionIcon />}</ListItemIcon>
