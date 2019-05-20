@@ -13,9 +13,9 @@ export default {
   bookReservation: function(dbReservation) {
     return axios.post("/api/reservation", dbReservation);
   },
-  checkReservationNo: function(dbReservation) {
+  checkReservationNo: function(email, customerReservationNumber) {
     // send user login info to API
-    return axios.get("/api/reservation/reservationNo", dbReservation);
+    return axios.get("/api/reservation/email/" + email + "/reservationNo/" + customerReservationNumber);
   },
   signup: function(signupInfo) {
     // send user signup info to API
