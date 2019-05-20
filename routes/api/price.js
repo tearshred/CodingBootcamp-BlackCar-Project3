@@ -17,5 +17,6 @@ module.exports = function (app) {
     }).then(function (dbPrice) {
       return res.json(dbPrice);
     })
-  });
+    console.log(req);
+  }); 
 }
