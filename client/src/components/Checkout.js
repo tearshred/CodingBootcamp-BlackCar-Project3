@@ -148,8 +148,8 @@ class Checkout extends React.Component {
                 console.log('Getting the reservation numbers from the database');
                 
                 // Generates a random reservation number
-                const min = Math.ceil(100001);
-                const max = Math.floor(999999);
+                const min = Math.ceil(1000001);
+                const max = Math.floor(9999999);
                 const resGenerator =  Math.floor(Math.random() * (max - min + 1)) + min;
                 this.setState({reservationNo: resGenerator});
                 console.log(this.state.reservationNo);

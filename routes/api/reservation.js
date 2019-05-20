@@ -41,7 +41,7 @@ module.exports = function (app) {
   });
 
   // Obtaining a specific reservation number
-  app.get("/api/reservation/:email/:emailaddress/:reservationNo/:customerReservationNumber", function (req, res) {
+  app.get("/api/reservation/email/:emailaddress/reservationNo/:customerReservationNumber", function (req, res) {
 
     // Finding the specific value based on the parameters below
     db.Reservation.findAll({
