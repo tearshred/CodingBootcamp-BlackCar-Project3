@@ -199,7 +199,7 @@ class MyTrips extends React.Component {
                     <Avatar className={classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
-                    <Typography component="h1" variant="h5" gutterBottom>
+                    <Typography component="h1" align='center' variant="h5" gutterBottom>
                         Manage Your Trip
                     </Typography>
                     <Typography component="h1" align='center' variant="h6">

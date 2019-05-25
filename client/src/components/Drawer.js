@@ -98,23 +98,6 @@ function Drawer() {
                     </ListItem>
                 </ListItemLink>
             </List>
-            <Divider/>
-            <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
-                <ListItemLink href="/signin">
-                    <ListItem button>
-                        <ListItemIcon>{<SignInIcon />}</ListItemIcon>
-                        <ListItemText primary="Sign In" />
-                    </ListItem>
-                </ListItemLink>
-            </List>
-            <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
-                <ListItemLink href="/signup">
-                    <ListItem button>
-                        <ListItemIcon>{<SignUpIcon />}</ListItemIcon>
-                        <ListItemText primary="Sign Up" />
-                    </ListItem>
-                </ListItemLink>
-            </List>
             <Divider />
             <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
                 <ListItemLink href="/terms">

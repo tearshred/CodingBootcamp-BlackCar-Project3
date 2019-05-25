@@ -222,7 +222,7 @@ class Checkout extends React.Component {
                     <Paper className={classes.paper}>
                         <Typography component="h1" variant="h4" align="center">
                             Book your Ride
-            </Typography>
+                        </Typography>
                         <Stepper activeStep={activeStep} className={classes.stepper}>
                             {steps.map(label => (
                                 <Step key={label}>
