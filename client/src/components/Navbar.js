@@ -63,20 +63,14 @@ export default function Navbar() {
             <Link variant="button" color="textPrimary" href="/booking" className={classes.link}>
               Booking
             </Link>
-            <Link variant="button" color="textPrimary" href="/mytrips" className={classes.link}>
-              My Trips
-            </Link>
             <Link variant="button" color="textPrimary" href="/faqs" className={classes.link}>
               Faq
             </Link>
           </nav>
           </Hidden>
-          <Hidden smDown>
-          <Button style={{marginRight: '0', marginLeft: '30px'}} href="/signin" color="primary" variant="outlined" className={classes.link}>
-            Sign in
-          </Button>
-              <Button style={{marginRight: '0'}} href="/signup" color="primary" variant="outlined" className={classes.link}>
-            Sign up
+          <Hidden xsDown>
+          <Button style={{marginRight: '0', marginLeft: '18px'}} href="/mytrips" color="primary" variant="outlined" className={classes.link}>
+            My Trips
           </Button>
           </Hidden>
         </Toolbar>
