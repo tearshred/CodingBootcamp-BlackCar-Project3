@@ -14,8 +14,6 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import MailIcon from '@material-ui/icons/Mail';
 import CardIcon from '@material-ui/icons/CreditCard';
 import DescriptionIcon from '@material-ui/icons/Description';
-import SignInIcon from '@material-ui/icons/Person';
-import SignUpIcon from '@material-ui/icons/PersonAdd';
 
 const useStyles = makeStyles({
     list: {
@@ -59,7 +57,7 @@ function Drawer() {
                 </ListItemLink>
             </List>
             <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
-                <ListItemLink href="/">
+                <ListItemLink href="/#services">
                     <ListItem button>
                         <ListItemIcon>{<BusinessIcon />}</ListItemIcon>
                         <ListItemText primary="Services" />

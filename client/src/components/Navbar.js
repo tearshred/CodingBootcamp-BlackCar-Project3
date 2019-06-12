@@ -54,14 +54,14 @@ export default function Navbar() {
             <Link variant="button" color="textPrimary" href="/" className={classes.link}>
               Home
             </Link>
-            <Link variant="button" color="textPrimary" href="/" className={classes.link}>
+            <Link variant="button" color="textPrimary" href="/#services" animate={{offset: 0, duration: 800}} className={classes.link}>
               Services
             </Link>
             <Link variant="button" color="textPrimary" href="/contact" className={classes.link}>
               Contact
             </Link>
             <Link variant="button" color="textPrimary" href="/booking" className={classes.link}>
-              Booking
+              Booking Form
             </Link>
             <Link variant="button" color="textPrimary" href="/faqs" className={classes.link}>
               Faq
