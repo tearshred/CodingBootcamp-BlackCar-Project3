@@ -17,8 +17,4 @@ export default {
     // send user login info to API
     return axios.get("/api/reservation/email/" + email + "/reservationNo/" + customerReservationNumber);
   },
-  signup: function(signupInfo) {
-    // send user signup info to API
-    return axios.post("/api/auth/signup", signupInfo);
-  }
 };

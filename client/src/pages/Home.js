@@ -13,6 +13,7 @@ import city from './assets/images/city-24px.svg';
 import airplane from './assets/images/airplane-24px.svg';
 import clock from './assets/images/clock-24px.svg';
 
+
 const useStyles = makeStyles(theme => ({
   '@global': {
     strong: {
@@ -144,7 +145,7 @@ export default function Home() {
       </main>
 
       {/* Services */}
-      <section className={classes.root}>
+      <section id="services" className={classes.root}>
         <Container className={classes.container}>
           <Typography component="h1" variant="h3" align="center" color="textPrimary" gutterBottom>
             Services
