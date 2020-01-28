@@ -44,7 +44,7 @@ function Faqs() {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <Typography className={classes.title} component="h2" variant="h3" align="center" color="textPrimary">
+        <Typography className={classes.title} component="h3" variant="h3" align="center" color="textPrimary">
           Frequently Asked Questions
         </Typography>
         <ExpansionPanel>
@@ -57,7 +57,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Our fleet of exclusive black cars offer business travelers a luxury experience. Each sedan holds up to 4 passengers, plus luggage. Cars are clean, comfortable, and suitable for an exclusive experience.
+              Our fleet of exclusive black cars offer business travelers a luxury experience. Each sedan holds up to 3 passengers, plus luggage. Cars are clean, comfortable, and suitable for an exclusive experience.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

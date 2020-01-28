@@ -125,7 +125,7 @@ export default function Home() {
                   Book Your Black Car Now
                   </Typography>
                 <Typography variant="h5" color="inherit" paragraph>
-                  We offer Ariport and Charter transportation all over San Diego county.
+                  We offer Airport and Charter transportation all over San Diego county.
                   </Typography>
                 <Button
                   color="primary"
