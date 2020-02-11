@@ -113,7 +113,7 @@ function Terms() {
                     <p style={{ marginTop: '4px' }}>Customers may add an additional stop to an airport transfer or point to point reservation for an additional fee. Extra stop fees vary and will be charged at Driver’s discretion. Extra Stop Fees do not apply to charter reservations. If an extra stop incurs additional miles, additional fees may apply.</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textPrimary" component="p">
-                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}Wait Fees</p>
+                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}  Wait Fees</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p">
                     <p style={{ marginTop: '4px' }}>Wait Fees are incurred when the customer is unable to go at the requested time and the vehicle’s operator must wait for more than a few minutes to provide service. Fees are intended for waits that are usually excessive and wait fees are charged at the vehicle operator’s discretion.</p>
@@ -192,27 +192,27 @@ function Terms() {
                     <p style={{ marginTop: "4px" }}>{'Customers are encouraged to '}<Link href="/contact" title="Contact">notify us</Link>{' of their experience, good or bad.'}</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textPrimary" component="p">
-                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}Limitations on Compensation Following Service Failure</p>
+                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}  Limitations on Compensation Following Service Failure</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p">
                     <p style={{ marginTop: '4px', marginBottom: '4px' }}>Where it is determined to be company fault, customers may receive compensation in the form of a partial or complete refund, reservation credits, or through other means.</p>
                     <p style={{ marginTop: "4px" }}>In most cases where alternative transportation is taken and paid for by the customer, reimbursement will not include full refund of the original reservation but will reimburse the difference paid for the alternate mode of transportation over the original cost of the reservation with service.</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textPrimary" component="p">
-                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}Limitations on Compensation Following Missed Flights</p>
+                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}  Limitations on Compensation Following Missed Flights</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p">
                     <p style={{ marginTop: '4px', marginBottom: '4px' }}>When it is determined to be company fault, We may provide compensation not to exceed $200.00 per person for domestic and international flights. We may reimburse for overnight lodging in the event customer cannot book a flight out on the same day of travel. Reimbursement is based on the average standard room rate as dictated by management in that market. Meals and other expenses are not covered as part of reimbursement for delays or missed flights.</p>
                     <p style={{ marginTop: "4px" }}>We do not assume any responsibility for lost income or potential income, and other losses resulting from missed professional or personal functions. When traveling to an important event, it is recommended to allow extra travel time by booking earlier than the recommended time to avoid delays.</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textPrimary" component="p">
-                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}Limitations on Customer Claim Time</p>
+                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}  Limitations on Customer Claim Time</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p">
                     <p style={{ marginTop: '4px' }}>The Customer hereby acknowledges and agrees that, unless a longer period is mandated and made unwaiveble by law, any claim relating to the services provided to Customer hereunder, including, without limitation, claims relating to damaged luggage, missed flight or other out of pocket expenses due to any alleged service failure, must be brought within 30 days after the occurrence of the act or omission that is the subject of the claim.</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textPrimary" component="p">
-                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}Refunds</p>
+                    <p style={{ marginBottom: '4px' }}>{<StopIcon style={{ fontSize: 'small' }} />}  Refunds</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p">
                     <p style={{ marginTop: '4px' }}>For Credit Card Refunds: Once approved, a refund request is submitted within 24 hours, excluding weekends and federal holidays. The refund is then completed by customer’s financial institution. Customer should refer to their financial institution to check on status of refund.</p>
