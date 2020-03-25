@@ -227,7 +227,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <p>You can make a change to your reservation at any time by logging into your  account on our website, and going to the "My Trips" section.</p>
+              <p>You can make a change to your reservation at any time by logging into your account on our website or calling us.</p>
               <p>Please do not send an email to request a change in your reservation. Email requests are handled in the order they are received and may not be addressed in time to comply with our two-hour cancellation policy. For changes less than 24 hrs prior to scheduled pickup time please call or text 1 (619) 254-9269.</p>
             </Typography>
           </ExpansionPanelDetails>
@@ -242,7 +242,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <p>Customers can cancel a reservation at any time up to one (2) hours before the scheduled pickup for a full fare refund using the website. Cancellations can also be made by calling 1 (619) 254-9269.</p>
+              <p>Customers can cancel a reservation at any time up to two (2) hours before the scheduled pickup for a full fare refund using the website. Cancellations can also be made by calling 1 (619) 254-9269.</p>
               <p>We will not provide a refund if the reservation is cancelled or changed less than 2 hours prior to pick-up time, or in the event of reservation abandonment. This includes bookings made within 2 hours of pickup time.</p>
               <p>Flight Cancellations and Delays Due to Airlines:</p>
               <p>Failure to contact us with flight cancellation or delay information in a timely manner may be considered reservation abandonment and may result in forfeiture of fare. Reservations impacted by airline delays and cancellations may qualify for refund when a replacement reservation is made.</p>
