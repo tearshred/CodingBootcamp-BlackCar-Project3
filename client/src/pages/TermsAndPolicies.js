@@ -280,7 +280,7 @@ function Terms() {
                     <p style={{ marginBottom: '4px' }}>Tipping Policy</p>
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p">
-                    <p style={{ marginTop: '4px' }}>Passengers have the option to tip their drivers in-person or online. When reviewing the total charge of your ride, there will be a pre-selected tip percentage added to the subtotal. This pre-selected tip percentage can be adjusted prior to purchase or select the “Tip in Vehicle” option which designates an in-person tip to our driver, via credit card or cash, after a ride completion.</p>
+                    <p style={{ marginTop: '4px' }}>For all online reservations 18% gratuity will be added to the final amount.</p>
                 </Typography>
             </div>
 

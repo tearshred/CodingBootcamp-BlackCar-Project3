@@ -54,14 +54,11 @@ export default function Navbar() {
             <Link variant="button" color="textPrimary" href="/" className={classes.link}>
               Home
             </Link>
-            <Link variant="button" color="textPrimary" href="/#services" animate={{offset: 0, duration: 800}} className={classes.link}>
+            <Link variant="button" color="textPrimary" href="/#services" animate={{offset: 0, duration: 1000}} className={classes.link}>
               Services
             </Link>
             <Link variant="button" color="textPrimary" href="/contact" className={classes.link}>
               Contact
-            </Link>
-            <Link variant="button" color="textPrimary" href="/booking" className={classes.link}>
-              Booking Form
             </Link>
             <Link variant="button" color="textPrimary" href="/faqs" className={classes.link}>
               Faq
@@ -69,8 +66,8 @@ export default function Navbar() {
           </nav>
           </Hidden>
           <Hidden xsDown>
-          <Button style={{marginRight: '0', marginLeft: '18px'}} href="/mytrips" color="primary" variant="outlined" className={classes.link}>
-            My Trips
+          <Button style={{marginRight: '0', marginLeft: '18px'}} href="/booking" color="primary" variant="outlined" className={classes.link}>
+            Booking
           </Button>
           </Hidden>
         </Toolbar>
