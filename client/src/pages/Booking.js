@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Checkout from '../components/Checkout';
+import Quote from '../components/Quote';
 
 class Booking extends Component {
   render() {
     return (
-      <Checkout />
+      <Quote />
     );
   }
 }

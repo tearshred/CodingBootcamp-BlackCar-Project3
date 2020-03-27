@@ -24,6 +24,7 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        padding: theme.spacing(3, 2),
     },
     avatar: {
         marginLeft: 'auto',
@@ -37,9 +38,6 @@ const styles = theme => ({
     },
     submit: {
         margin: theme.spacing(3, 0, 2),
-    },
-    paper: {
-        padding: theme.spacing(3, 2),
     },
     reservationLookup: {
         marginTop: theme.spacing(10),
