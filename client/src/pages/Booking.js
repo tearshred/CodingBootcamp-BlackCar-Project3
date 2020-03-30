@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Quote from '../components/Quote';
 
 class Booking extends Component {
 
@@ -14,8 +13,7 @@ class Booking extends Component {
   
   render() {
     return (
-      //<Quote />
-
+  
       <div>
         <a href={"https://book.mylimobiz.com/v4/naissus"} data-ores-widget={"website"} data-ores-alias={"naissus"}>Online Reservations</a>
       </div>

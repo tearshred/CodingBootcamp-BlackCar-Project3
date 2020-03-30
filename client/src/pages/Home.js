@@ -12,7 +12,7 @@ import banner from './assets/images/banner_main.png';
 import city from './assets/images/city-24px.svg';
 import airplane from './assets/images/airplane-24px.svg';
 import clock from './assets/images/clock-24px.svg';
-
+import Quote from '../components/Quote';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -38,12 +38,12 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     justifyContent: 'auto',
     padding: theme.spacing(3),
-    marginTop: '-180px',
+    marginTop: '-220px',
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(6),
+      padding: theme.spacing(4),
     },
     [theme.breakpoints.down('sm')]: {
-      marginTop: '-80px',
+      marginTop: '-120px',
     },
   },
   buttonHero: {
@@ -127,16 +127,9 @@ export default function Home() {
                 <Typography variant="h5" color="inherit" paragraph>
                   We offer Airport and Charter transportation all over San Diego county.
                   </Typography>
-                <Button
-                  color="primary"
-                  size="large"
-                  variant="contained"
-                  className={classes.buttonHero}
-                  component="a"
-                  href="/booking"
-                >
-                  BOOK NOW
-                </Button>
+                <div>
+                  <Quote/>
+                </div>
               </div>
             </Grid>
           </Grid>

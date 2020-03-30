@@ -41,7 +41,7 @@ export class QuoteForm extends React.Component {
 
         return (
             <React.Fragment>
-                <Typography variant="h5" align="center" gutterBottom>
+                <Typography variant="h5" align="center">
                     Enter your zip code for a quick quote
                 </Typography>
                 <Grid container spacing={24}>

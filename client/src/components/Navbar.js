@@ -67,7 +67,7 @@ export default function Navbar() {
           </Hidden>
           <Hidden xsDown>
           <Button style={{marginRight: '0', marginLeft: '18px'}} href="/booking" color="primary" variant="outlined" className={classes.link}>
-            Booking
+            Booking Form
           </Button>
           </Hidden>
         </Toolbar>
