@@ -19,6 +19,9 @@ const styles = theme => ({
     media: {
         height: 120,
     },
+    fare: {
+        marginBottom: 0,
+    },
 });
 
 class QuotePrice extends React.Component {
@@ -37,12 +40,12 @@ class QuotePrice extends React.Component {
                                     image={sedan}
                                     title="Executive Sedan"
                                 />
-                                <CardContent align="center">
-                                    <Typography gutterBottom variant="h5" component="h2">
+                                <CardContent className={classes.content} align="center">
+                                    <Typography variant="h5" component="h2">
                                         Executive Sedan
                                     </Typography>
                                     <Typography component="p">
-                                        <h2>Base fare ${this.props.sedanPrice}</h2>
+                                        <h2 className={classes.fare}>Base fare is ${this.props.sedanPrice}</h2>
                                     </Typography>
                                 </CardContent>
                         </Card>
@@ -54,12 +57,12 @@ class QuotePrice extends React.Component {
                                     image={suv}
                                     title="Executive SUV"
                                 />
-                                <CardContent align="center">
-                                    <Typography gutterBottom variant="h5" component="h2">
+                                <CardContent className={classes.content} align="center">
+                                    <Typography variant="h5" component="h2">
                                         Executive SUV
                                     </Typography>
                                     <Typography component="p">
-                                        <h2>Base fare ${this.props.suvPrice}</h2>
+                                        <h2 className={classes.fare}>Base fare is ${this.props.suvPrice}</h2>
                                     </Typography>
                                 </CardContent>
                         </Card>

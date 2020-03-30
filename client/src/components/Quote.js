@@ -15,22 +15,20 @@ const styles = theme => ({
     },
     layout: {
         width: 'auto',
-        marginLeft: theme.spacing.unit * 2,
-        marginRight: theme.spacing.unit * 2,
-        [theme.breakpoints.up(600 + theme.spacing.unit * 2 * 2)]: {
-            width: 600,
+        marginLeft: theme.spacing.unit,
+        marginRight: theme.spacing.unit,
+        [theme.breakpoints.up(600 + theme.spacing.unit * 2)]: {
+            width: 584,
             marginLeft: 'auto',
             marginRight: 'auto',
         },
     },
     paper: {
-        marginTop: theme.spacing.unit * 2,
-        marginBottom: theme.spacing.unit * 2,
-        padding: theme.spacing.unit * 2,
-        [theme.breakpoints.up(600 + theme.spacing.unit * 3 * 2)]: {
-            marginTop: theme.spacing.unit * 6,
-            marginBottom: theme.spacing.unit * 6,
-            padding: theme.spacing.unit * 3,
+        marginTop: theme.spacing.unit,
+        padding: theme.spacing.unit,
+        [theme.breakpoints.up(600 + theme.spacing.unit * 3)]: {
+            marginTop: theme.spacing.unit * 3,
+            padding: theme.spacing.unit * 2,
         },
     },
     buttons: {
@@ -38,7 +36,7 @@ const styles = theme => ({
         justifyContent: 'flex-end',
     },
     button: {
-        marginTop: theme.spacing.unit,
+        marginTop: theme.spacing.unit * 0.5,
         marginLeft: theme.spacing.unit,
     },
 });
@@ -147,7 +145,7 @@ class Quote extends React.Component {
                             {activeStep === steps.length ? (
                                 <React.Fragment>
                                     <Typography variant="h5" gutterBottom>
-                                        Thank you for your order.
+                                        Thank you for your interest!
                                     </Typography>
                                 </React.Fragment>
                                 ) : (
