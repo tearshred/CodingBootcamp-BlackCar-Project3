@@ -10,9 +10,6 @@ import sedan from '../pages/assets/images/Sedan.png';
 import suv from '../pages/assets/images/SUV.png';
 
 const styles = theme => ({
-    TextField: {
-        padding: 8,
-    },
     card: {
         margin: 5,
     },
@@ -22,6 +19,12 @@ const styles = theme => ({
     fare: {
         marginBottom: 0,
     },
+    removeBottomPadding: {
+        paddingBottom: theme.spacing.unit * 2,
+        "&:last-child": {
+          paddingBottom: theme.spacing.unit * 2
+        }
+    }
 });
 
 class QuotePrice extends React.Component {
@@ -40,7 +43,7 @@ class QuotePrice extends React.Component {
                                     image={sedan}
                                     title="Executive Sedan"
                                 />
-                                <CardContent className={classes.content} align="center">
+                                <CardContent className={classes.content} align="center" classes={{ root: classes.removeBottomPadding}}>
                                     <Typography variant="h5" component="h2">
                                         Executive Sedan
                                     </Typography>
@@ -57,7 +60,7 @@ class QuotePrice extends React.Component {
                                     image={suv}
                                     title="Executive SUV"
                                 />
-                                <CardContent className={classes.content} align="center">
+                                <CardContent className={classes.content} align="center" classes={{ root: classes.removeBottomPadding}}>
                                     <Typography variant="h5" component="h2">
                                         Executive SUV
                                     </Typography>
