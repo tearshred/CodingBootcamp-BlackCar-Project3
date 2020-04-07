@@ -17,6 +17,8 @@ const styles = theme => ({
         width: 'auto',
         marginLeft: theme.spacing.unit,
         marginRight: theme.spacing.unit,
+        backgroundColor: theme.palette.grey[200],
+        borderRadius: theme.spacing.unit / 2,
         [theme.breakpoints.up(600 + theme.spacing.unit * 2)]: {
             width: 584,
             marginLeft: 'auto',
@@ -26,6 +28,7 @@ const styles = theme => ({
     paper: {
         marginTop: theme.spacing.unit,
         padding: theme.spacing.unit,
+        backgroundColor: theme.palette.grey[200],
         [theme.breakpoints.up(600 + theme.spacing.unit * 3)]: {
             marginTop: theme.spacing.unit * 3,
             padding: theme.spacing.unit * 2,

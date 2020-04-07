@@ -16,10 +16,11 @@ const styles = theme => ({
     },
     formControl: {
         margin: theme.spacing.unit,
-        maxWidth: 260,
+        width: 260,
+        textAlign: 'left',
     },
     selectEmpty: {
-        marginTop: theme.spacing.unit * 1.625,
+        marginTop: theme.spacing.unit * 1.6,
         paddingTop: 4,
     },
     TextField: {
@@ -68,7 +69,7 @@ export class QuoteForm extends React.Component {
                             className={classes.selectEmpty}
                         >
                             <MenuItem value="">
-                                <em>Select Airport</em>
+                                <em>Select Your Airport *</em>
                             </MenuItem>
                             <MenuItem name="SAN" value={"SAN"}>San Diego International Airport</MenuItem>
                             <MenuItem name="LAX" value={"LAX"}>Los Angeles International Airport</MenuItem>
