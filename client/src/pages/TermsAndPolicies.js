@@ -282,6 +282,14 @@ function Terms() {
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p">
                     <p style={{ marginTop: '4px' }}>For all online reservations 18% gratuity will be added to the final amount.</p>
                 </Typography>
+                <Typography align="left" variant="subtitle1" color="textPrimary" component="p">
+                    <p style={{ marginBottom: '4px' }}>Privacy Policy</p>
+                </Typography>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p">
+                    <p style={{ marginTop: '4px', marginBottom: "4px" }}>We are committed to protecting your privacy. We use the information you provide to secure your reservation. In order to take a ride, you need to provide a pick-up address, drop-off address, valid email address, phone number, and credit card information. 
+                    In order to set up an account, you need to provide a valid email address, full name, phone number and password. We may need to store encrypted credit card information and use it for both billing and payment purposes.</p>
+                    <p style={{ marginTop: "4px", marginBottom: "4px" }}>We do not sell, trade, or rent your personal information to others. At some point in the future, we may use the information we collect to occasionally notify you about important functionality changes to the Web site, new services, and special offers we think you’ll find valuable. If we do so, you’ll be provided an opportunity to unsubscribe from this mailing list.</p>
+                </Typography>
             </div>
 
             {/* Footer */}
