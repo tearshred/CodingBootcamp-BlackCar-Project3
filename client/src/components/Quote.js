@@ -107,7 +107,8 @@ class Quote extends React.Component {
                 .catch(err => console.log(err));
             break
             case 1:
-                console.log('nothing');
+                console.log('forward to booking page');
+                window.location.href = '/booking';
             break
             default: 
                 console.log('over');
@@ -133,12 +134,12 @@ class Quote extends React.Component {
             [name]: value,
         });
     };
-
+    
     render() {
         const { classes } = this.props;
         const { activeStep } = this.state;
         const steps = ['Pick Up Address', 'Select Your Vehicle'];
-        
+
         return (
             <React.Fragment>
                 <CssBaseline />
