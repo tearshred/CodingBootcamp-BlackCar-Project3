@@ -17,7 +17,7 @@ class Contact extends React.Component {
           padding: 20
         }}
       >
-        <form style={{ width: "50%" }}>
+        <form style={{ width: "86%" , maxWidth: "660px"}}>
           <h1>Contact Form</h1>
 
           <FormControl margin="normal" fullWidth>

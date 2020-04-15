@@ -57,7 +57,8 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Our fleet of exclusive black cars offer business travelers a luxury experience. Each sedan holds up to 3 passengers, plus luggage. Cars are clean, comfortable, and suitable for an exclusive experience.
+              Our fleet of exclusive black cars offer business travelers a luxury experience. 
+              Each sedan holds up to 3 passengers, plus luggage. Cars are clean, comfortable, and suitable for an exclusive experience.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -71,7 +72,8 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Our private SUV service is ideal for both leisure and corporate travel. Each SUV can hold up to 6 passengers plus luggage. Whether you are headed to a business meeting, special event or to the airport, Black SUV is a more spacious choice for your travel.
+              Our private SUV service is ideal for both leisure and corporate travel. Each SUV can hold up to 6 passengers plus luggage. 
+              Whether you are headed to a business meeting, special event or to the airport, Black SUV is a more spacious choice for your travel.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -85,7 +87,8 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              For the best experience, you are able to pre-plan your airport transportation and around town service. If you have a special event, business meeting or a plane to catch, you can schedule your ride either days or months in advance.
+              For the best experience, you are able to pre-plan your airport transportation and around town service. 
+              If you have a special event, business meeting or a plane to catch, you can schedule your ride either days or months in advance.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -99,7 +102,8 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              We specialize in event transportation designed with your needs in mind. Black cars can be booked for a night out on the town, special events and even wedding day service.
+              We specialize in event transportation designed with your needs in mind. 
+              Black cars can be booked for a night out on the town, special events and even wedding day service.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -113,7 +117,11 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Hourly service is available for bookings of 2 hours or more. During your reserved block of time, you will be assigned a designated vehicle and a private chauffeur exclusively for you and your party.
+              Hourly service is available for bookings of 2 hours or more. During your reserved block of time, 
+              you will be assigned a designated vehicle and a private chauffeur exclusively for you and your party. 
+              With this service, you can make as many stops as needed and for as long as you want. 
+              <br />
+              Please note that hourly charters can't be used when booking one way out-of-county rides.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -127,7 +135,10 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Meet and Greet Service offers customers a more unique experience. When you pre-book your black car or SUV, you will have the option to select the “Meet and Greet Service.” Upon arrival to your destination, your private chauffeur will meet you inside of the airport in the baggage claim area holding a greeting sign with your name on it. Additional fee of $10 will apply to your total fare.
+              Meet and Greet Service offers customers a more unique experience. 
+              When you pre-book your black car or SUV, you will have the option to select the “Meet and Greet Service.” 
+              Upon arrival to your destination, your private chauffeur will meet you inside of the airport in the baggage claim area holding a greeting sign with your name on it. 
+              Additional fee of $10 will apply to your total fare.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -141,7 +152,8 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Will Call Service is another exclusive choice for travelers. When you arrive to your destination, your private chauffeur will text you. Once you're ready for curbside pickup your chauffeur will meet you in the arrivals curbside pickup area. Be sure to provide your mobile phone number that you will be traveling with when you make your reservation.
+              Will Call Service is another exclusive choice for travelers. When you arrive to your destination, your private chauffeur will text you. 
+              Once you're ready for curbside pickup your chauffeur will meet you in the arrivals curbside pickup area. Be sure to provide your mobile phone number that you will be traveling with when you make your reservation.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -155,7 +167,8 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Our luggage policy closely follows that of airlines. For each passenger, two checked bags (e.g. suitcase, duffel bag) and two carry-on items (e.g. diaper bag, laptop case, backpack, or purse) all ride free. Extra fees may apply in the instances listed in our terms. Contact us for needs outside of those listed.
+              Our luggage policy closely follows that of airlines. For each passenger, two checked bags (e.g. suitcase, duffel bag) and two carry-on items (e.g. diaper bag, laptop case, backpack, or purse) all ride free. 
+              Extra fees may apply in the instances listed in our terms. Contact us for needs outside of those listed.
           </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -169,9 +182,11 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <p>Our policy regarding the transport of animals is designed to ensure adequate space for the kennel(s), and your baggage. All animals – excluding service animals – must be kenneled to board the vehicle. Kennel guidelines are as follows:</p>
-              <p>Less than 25 pounds: Lap carrier permitted</p>
-              <p>More than 25 pounds: Must reserve SUV</p>
+              Our policy regarding the transport of animals is designed to ensure adequate space for the kennel(s), and your baggage. All animals – excluding service animals – must be kenneled to board the vehicle. Kennel guidelines are as follows:
+              <br />
+              Less than 25 pounds: Lap carrier permitted
+              <br />
+              More than 25 pounds: Must reserve SUV
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -227,8 +242,11 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <p>You can make a change to your reservation at any time by logging into your account on our website or calling us.</p>
-              <p>Please do not send an email to request a change in your reservation. Email requests are handled in the order they are received and may not be addressed in time to comply with our two-hour cancellation policy. For changes less than 24 hrs prior to scheduled pickup time please call or text 1 (619) 254-9269.</p>
+              You can make a change to your reservation at any time by logging into your account on our website or calling us.
+              <br />
+              <br />
+              Please do not send an email to request a change in your reservation. Email requests are handled in the order they are received and may not be addressed in time to comply with our two-hour cancellation policy. 
+              For changes less than 24 hrs prior to scheduled pickup time please call or text 1 (619) 254-9269.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -242,10 +260,14 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <p>Customers can cancel a reservation at any time up to two (2) hours before the scheduled pickup for a full fare refund using the website. Cancellations can also be made by calling 1 (619) 254-9269.</p>
-              <p>We will not provide a refund if the reservation is cancelled or changed less than 2 hours prior to pick-up time, or in the event of reservation abandonment. This includes bookings made within 2 hours of pickup time.</p>
-              <p>Flight Cancellations and Delays Due to Airlines:</p>
-              <p>Failure to contact us with flight cancellation or delay information in a timely manner may be considered reservation abandonment and may result in forfeiture of fare. Reservations impacted by airline delays and cancellations may qualify for refund when a replacement reservation is made.</p>
+              Customers can cancel a reservation at any time up to two (2) hours before the scheduled pickup for a full fare refund using the website. Cancellations can also be made by calling 1 (619) 254-9269.
+              <br /><br />
+              We will not provide a refund if the reservation is cancelled or changed less than 2 hours prior to pick-up time, or in the event of reservation abandonment. This includes bookings made within 2 hours of pickup time.
+              <br /><br />
+              Flight Cancellations and Delays Due to Airlines:
+              <br /><br />
+              Failure to contact us with flight cancellation or delay information in a timely manner may be considered reservation abandonment and may result in forfeiture of fare. 
+              Reservations impacted by airline delays and cancellations may qualify for refund when a replacement reservation is made.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

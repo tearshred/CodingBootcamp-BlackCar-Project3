@@ -15,23 +15,23 @@ const styles = theme => ({
     },
     layout: {
         width: 'auto',
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
+        marginLeft: theme.spacing(1),
+        marginRight: theme.spacing(1),
         backgroundColor: theme.palette.grey[200],
-        borderRadius: theme.spacing.unit / 2,
-        [theme.breakpoints.up(600 + theme.spacing.unit * 2)]: {
+        borderRadius: theme.spacing(0.5),
+        [theme.breakpoints.up(600 + theme.spacing(2))]: {
             width: 584,
             marginLeft: 'auto',
             marginRight: 'auto',
         },
     },
     paper: {
-        marginTop: theme.spacing.unit,
-        padding: theme.spacing.unit,
+        marginTop: theme.spacing(1),
+        padding: theme.spacing(1),
         backgroundColor: theme.palette.grey[200],
-        [theme.breakpoints.up(600 + theme.spacing.unit * 3)]: {
-            marginTop: theme.spacing.unit * 3,
-            padding: theme.spacing.unit * 2,
+        [theme.breakpoints.up(600 + theme.spacing(3))]: {
+            marginTop: theme.spacing(3),
+            padding: theme.spacing(2),
         },
     },
     buttons: {
@@ -39,8 +39,9 @@ const styles = theme => ({
         justifyContent: 'flex-end',
     },
     button: {
-        marginTop: theme.spacing.unit * 0.5,
-        marginLeft: theme.spacing.unit,
+        marginTop: theme.spacing(0.5),
+        marginLeft: theme.spacing(1),
+        marginRight: theme.spacing(1),
     },
 });
 
@@ -91,7 +92,7 @@ class Quote extends React.Component {
                     let price = res.data;
 
                     let key = Object.keys(price);
-                    console.log(price[key]);
+                    console.log("Sedan price is $" + price[key]);
                     this.setState({sedanPrice: price[key]});
                 })
                 .catch(err => console.log(err));
@@ -101,7 +102,7 @@ class Quote extends React.Component {
                     let price = res.data;
 
                     let key = Object.keys(price);
-                    console.log(price[key])
+                    console.log("SUV price is $" + price[key])
                     this.setState({suvPrice: price[key]});
                 })
                 .catch(err => console.log(err));

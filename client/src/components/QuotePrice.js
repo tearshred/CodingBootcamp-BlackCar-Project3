@@ -11,18 +11,20 @@ import suv from '../pages/assets/images/SUV.png';
 
 const styles = theme => ({
     card: {
-        margin: 5,
+        margin: 6,
+        marginBottom: theme.spacing(1.6),
     },
     media: {
         height: 120,
     },
     fare: {
-        marginBottom: 0,
+        marginBottom: theme.spacing(0.5),
+        fontWeight: 600,
     },
     removeBottomPadding: {
-        paddingBottom: theme.spacing.unit * 2,
+        paddingBottom: theme.spacing(2),
         "&:last-child": {
-          paddingBottom: theme.spacing.unit * 2
+          paddingBottom: theme.spacing(2)
         }
     }
 });
@@ -35,7 +37,7 @@ class QuotePrice extends React.Component {
 
         return (
             <React.Fragment>
-                <Grid container spacing={24}>
+                <Grid container>
                     <Grid item xs={12} sm={6}>
                         <Card className={classes.card} >
                                 <CardMedia
@@ -44,11 +46,11 @@ class QuotePrice extends React.Component {
                                     title="Executive Sedan"
                                 />
                                 <CardContent className={classes.content} align="center" classes={{ root: classes.removeBottomPadding}}>
-                                    <Typography variant="h5" component="h2">
+                                    <Typography variant="h5" component="h2" gutterBottom>
                                         Executive Sedan
                                     </Typography>
-                                    <Typography component="p">
-                                        <h2 className={classes.fare}>Base fare is ${this.props.sedanPrice}</h2>
+                                    <Typography variant="h5" component="h2" className={classes.fare}>
+                                        Base fare is ${this.props.sedanPrice}
                                     </Typography>
                                 </CardContent>
                         </Card>
@@ -61,11 +63,11 @@ class QuotePrice extends React.Component {
                                     title="Executive SUV"
                                 />
                                 <CardContent className={classes.content} align="center" classes={{ root: classes.removeBottomPadding}}>
-                                    <Typography variant="h5" component="h2">
+                                    <Typography variant="h5" component="h2" gutterBottom>
                                         Executive SUV
                                     </Typography>
-                                    <Typography component="p">
-                                        <h2 className={classes.fare}>Base fare is ${this.props.suvPrice}</h2>
+                                    <Typography variant="h5" component="h2" className={classes.fare}>
+                                        Base fare is ${this.props.suvPrice}
                                     </Typography>
                                 </CardContent>
                         </Card>

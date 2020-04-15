@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 require("./routes/api/price.js")(app);
-require("./routes/api/reservation.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
