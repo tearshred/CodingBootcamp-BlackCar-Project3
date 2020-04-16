@@ -5,7 +5,6 @@ import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 import Faqs from './pages/Faqs';
 import Navbar from './components/Navbar';
-import MyTrips from './pages/MyTrips';
 import Terms from './pages/TermsAndPolicies';
 import NoMatch from './pages/NoMatch';
 import './App.css';
@@ -20,7 +19,6 @@ function App() {
         <Route exact path='/contact' component={Contact} />
         <Route exact path='/booking' component={Booking} />
         <Route exact path='/faqs' component={Faqs} />
-        <Route exact path='/mytrips' component={MyTrips} />
         <Route exact path='/terms' component={Terms} />
         <Route component={NoMatch} />
       </Switch>

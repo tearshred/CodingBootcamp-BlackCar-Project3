@@ -15,12 +15,12 @@ const styles = theme => ({
         flexWrap: 'wrap',
     },
     formControl: {
-        margin: theme.spacing.unit,
+        margin: theme.spacing(1),
         width: 260,
         textAlign: 'left',
     },
     selectEmpty: {
-        marginTop: theme.spacing.unit * 1.6,
+        marginTop: theme.spacing(1.6),
         paddingTop: 4,
     },
     TextField: {
@@ -45,7 +45,7 @@ export class QuoteForm extends React.Component {
                 <Typography variant="h5" align="center">
                     Enter your zip code for a quick quote
                 </Typography>
-                <Grid container spacing={24}>
+                <Grid container>
                     <Grid className={classes.TextField} item xs={12} sm={6}>
                         <TextField
                             required
@@ -58,7 +58,7 @@ export class QuoteForm extends React.Component {
                             onChange={this.props.handleChange}
                         />
                     </Grid>
-                    <FormControl item xs={12} sm={6} className={classes.formControl}>
+                    <FormControl xs={12} sm={6} className={classes.formControl}>
                         <Select
                             required
                             value={this.props.destination}
