@@ -47,7 +47,7 @@ export default function Navbar() {
         <Toolbar className={classes.toolbar}>
           <Drawer />
           <Typography style={{marginLeft: '5px'}} variant="h4" color="inherit" noWrap className={classes.toolbarTitle}>
-            Black Car
+            Black Car Service
           </Typography>
           <Hidden smDown>
           <nav>
