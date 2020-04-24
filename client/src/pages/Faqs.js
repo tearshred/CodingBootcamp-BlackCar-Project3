@@ -286,7 +286,7 @@ function Faqs() {
       <footer className={classes.footer}>
         <Container maxWidth="lg">
           <Typography variant="h5" align="center" gutterBottom>
-            San Diego Airport Transportation
+            San Diego Executive Transportation
        </Typography>
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
             Phone: (619) 254-9269  |  Location: La Jolla, CA 92037
