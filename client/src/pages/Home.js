@@ -12,7 +12,9 @@ import banner from './assets/images/banner_main.png';
 import city from './assets/images/city-24px.svg';
 import airplane from './assets/images/airplane-24px.svg';
 import clock from './assets/images/clock-24px.svg';
+import footerlogo from '../pages/assets/images/LogoCropped.png';
 import Quote from '../components/Quote';
+import CardHero from '../components/CardHero';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -50,9 +52,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
     minWidth: 220,
     borderRadius: 0,
-      '&:hover': {
-        borderRadius: 4,
-      }, 
+    '&:hover': {
+      borderRadius: 4,
+    },
   },
   root: {
     display: 'flex',
@@ -89,15 +91,18 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(8),
     minWidth: 240,
     borderRadius: 0,
-      '&:hover': {
-        borderRadius: 4,
-      }, 
+    '&:hover': {
+      borderRadius: 4,
+    },
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
     borderTop: `2px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(4),
     padding: theme.spacing(6, 0),
+  },
+  footerlogo: {
+    maxWidth: 330,
   },
 }));
 
@@ -112,11 +117,11 @@ export default function Home() {
       <main>
         {/* Main featured post */}
         <Paper className={classes.mainFeaturedPost}>
-           <img
+          <img
             style={{ width: '100%' }}
             src={banner}
             alt="background"
-          /> 
+          />
           <div className={classes.overlay} />
           <Grid>
             <Grid item md={12}>
@@ -128,7 +133,7 @@ export default function Home() {
                   We offer Airport and Charter transportation all over San Diego county.
                   </Typography>
                 <div>
-                  <Quote/>
+                  <Quote />
                 </div>
               </div>
             </Grid>
@@ -208,7 +213,8 @@ export default function Home() {
         </Container>
       </section>
       {/* End of Services */}
-      
+
+      <CardHero />
       <ContactHero />
 
       {/* Footer */}
@@ -223,12 +229,15 @@ export default function Home() {
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
             © {currentYear} Naissus LLC
           </Typography>
+          <Box mt={2} align="center">
+          <img src={footerlogo} alt="logo"  className={classes.footerlogo} />
+          </Box>
         </Container>
-        <Box mt={5}>
-      <Typography variant="body2" color="textSecondary" align="center">
-      {'Developed by Bojan & Veselin.'}
-      </Typography>
-      </Box>
+        <Box mt={3}>
+          <Typography variant="body2" color="textSecondary" align="center">
+            {'Developed by Bojan & Veselin.'}
+          </Typography>
+        </Box>
       </footer>
       {/* End footer */}
     </React.Fragment>

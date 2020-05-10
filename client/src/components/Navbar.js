@@ -8,6 +8,7 @@ import Link from '@material-ui/core/Link';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from './Drawer';
 import { makeStyles } from '@material-ui/core/styles';
+import logo from '../pages/assets/images/LogoCropped.png';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -28,12 +29,19 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     flexWrap: 'wrap',
   },
+  logo: {
+    height: 46,
+  },
   toolbarTitle: {
     flexGrow: 1,
-    fontWeight: 600
+    fontWeight: 600,
   },
   link: {
     margin: theme.spacing(1, 1.5),
+    fontWeight: 500,
+    "&:active": {
+      fontWeight: 600,
+    }
   },
 }));
 
@@ -46,15 +54,14 @@ export default function Navbar() {
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Drawer />
-          <Typography style={{marginLeft: '5px'}} variant="h4" color="inherit" noWrap className={classes.toolbarTitle}>
-            Black Car Service
-          </Typography>
+          <img src={logo} alt="logo" className={classes.logo} />
+          <Typography style={{marginLeft: '5px'}} variant="h4" color="inherit" className={classes.toolbarTitle}></Typography>
           <Hidden smDown>
           <nav>
             <Link variant="button" color="textPrimary" href="/" className={classes.link}>
               Home
             </Link>
-            <Link variant="button" color="textPrimary" href="/#services" animate={{offset: 0, duration: 1000}} className={classes.link}>
+            <Link variant="button" color="textPrimary" href="/#services" className={classes.link}>
               Services
             </Link>
             <Link variant="button" color="textPrimary" href="/contact" className={classes.link}>
@@ -66,7 +73,7 @@ export default function Navbar() {
           </nav>
           </Hidden>
           <Hidden xsDown>
-          <Button style={{marginRight: '0', marginLeft: '18px'}} href="/booking" color="primary" variant="outlined" className={classes.link}>
+          <Button style={{marginRight: '0', marginLeft: '18px'}} href="/booking" color="primary" variant="outlined">
             Booking Form
           </Button>
           </Hidden>
