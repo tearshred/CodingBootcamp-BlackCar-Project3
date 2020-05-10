@@ -8,6 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
+import footerlogo from '../pages/assets/images/LogoCropped.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,13 +28,16 @@ const useStyles = makeStyles(theme => ({
     fontWeight: theme.typography.fontWeightRegular,
   },
   subheader: {
-    paddingTop: '40px', 
+    paddingTop: '40px',
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
     borderTop: `2px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(4),
     padding: theme.spacing(6, 0),
+  },
+  footerlogo: {
+    maxWidth: 330,
   },
 }));
 
@@ -57,7 +61,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Our fleet of exclusive black cars offer business travelers a luxury experience. 
+              Our fleet of exclusive black cars offer business travelers a luxury experience.
               Each sedan holds up to 3 passengers, plus luggage. Cars are clean, comfortable, and suitable for an exclusive experience.
           </Typography>
           </ExpansionPanelDetails>
@@ -72,7 +76,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Our private SUV service is ideal for both leisure and corporate travel. Each SUV can hold up to 6 passengers plus luggage. 
+              Our private SUV service is ideal for both leisure and corporate travel. Each SUV can hold up to 6 passengers plus luggage.
               Whether you are headed to a business meeting, special event or to the airport, Black SUV is a more spacious choice for your travel.
           </Typography>
           </ExpansionPanelDetails>
@@ -87,7 +91,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              For the best experience, you are able to pre-plan your airport transportation and around town service. 
+              For the best experience, you are able to pre-plan your airport transportation and around town service.
               If you have a special event, business meeting or a plane to catch, you can schedule your ride either days or months in advance.
           </Typography>
           </ExpansionPanelDetails>
@@ -102,7 +106,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              We specialize in event transportation designed with your needs in mind. 
+              We specialize in event transportation designed with your needs in mind.
               Black cars can be booked for a night out on the town, special events and even wedding day service.
           </Typography>
           </ExpansionPanelDetails>
@@ -117,9 +121,9 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Hourly service is available for bookings of 2 hours or more. During your reserved block of time, 
-              you will be assigned a designated vehicle and a private chauffeur exclusively for you and your party. 
-              With this service, you can make as many stops as needed and for as long as you want. 
+              Hourly service is available for bookings of 2 hours or more. During your reserved block of time,
+              you will be assigned a designated vehicle and a private chauffeur exclusively for you and your party.
+              With this service, you can make as many stops as needed and for as long as you want.
               <br />
               Please note that hourly charters can't be used when booking one way out-of-county rides.
           </Typography>
@@ -135,9 +139,9 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Meet and Greet Service offers customers a more unique experience. 
-              When you pre-book your black car or SUV, you will have the option to select the “Meet and Greet Service.” 
-              Upon arrival to your destination, your private chauffeur will meet you inside of the airport in the baggage claim area holding a greeting sign with your name on it. 
+              Meet and Greet Service offers customers a more unique experience.
+              When you pre-book your black car or SUV, you will have the option to select the “Meet and Greet Service.”
+              Upon arrival to your destination, your private chauffeur will meet you inside of the airport in the baggage claim area holding a greeting sign with your name on it.
               Additional fee of $10 will apply to your total fare.
           </Typography>
           </ExpansionPanelDetails>
@@ -152,7 +156,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Will Call Service is another exclusive choice for travelers. When you arrive to your destination, your private chauffeur will text you. 
+              Will Call Service is another exclusive choice for travelers. When you arrive to your destination, your private chauffeur will text you.
               Once you're ready for curbside pickup your chauffeur will meet you in the arrivals curbside pickup area. Be sure to provide your mobile phone number that you will be traveling with when you make your reservation.
           </Typography>
           </ExpansionPanelDetails>
@@ -167,7 +171,7 @@ function Faqs() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Our luggage policy closely follows that of airlines. For each passenger, two checked bags (e.g. suitcase, duffel bag) and two carry-on items (e.g. diaper bag, laptop case, backpack, or purse) all ride free. 
+              Our luggage policy closely follows that of airlines. For each passenger, two checked bags (e.g. suitcase, duffel bag) and two carry-on items (e.g. diaper bag, laptop case, backpack, or purse) all ride free.
               Extra fees may apply in the instances listed in our terms. Contact us for needs outside of those listed.
           </Typography>
           </ExpansionPanelDetails>
@@ -245,7 +249,7 @@ function Faqs() {
               You can make a change to your reservation at any time by logging into your account on our website or calling us.
               <br />
               <br />
-              Please do not send an email to request a change in your reservation. Email requests are handled in the order they are received and may not be addressed in time to comply with our two-hour cancellation policy. 
+              Please do not send an email to request a change in your reservation. Email requests are handled in the order they are received and may not be addressed in time to comply with our two-hour cancellation policy.
               For changes less than 24 hrs prior to scheduled pickup time please call or text 1 (619) 254-9269.
             </Typography>
           </ExpansionPanelDetails>
@@ -266,19 +270,19 @@ function Faqs() {
               <br /><br />
               Flight Cancellations and Delays Due to Airlines:
               <br /><br />
-              Failure to contact us with flight cancellation or delay information in a timely manner may be considered reservation abandonment and may result in forfeiture of fare. 
+              Failure to contact us with flight cancellation or delay information in a timely manner may be considered reservation abandonment and may result in forfeiture of fare.
               Reservations impacted by airline delays and cancellations may qualify for refund when a replacement reservation is made.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <div className={classes.subheader}>
-        <Typography align='center' variant="h6">
-          {'For more details please check our '}
-          <Link href="/terms" title="Terms and Policies">
-            Terms and Policies
+          <Typography align='center' variant="h6">
+            {'For more details please check our '}
+            <Link href="/terms" title="Terms and Policies">
+              Terms and Policies
               </Link>
-          {' page.'}
-        </Typography>
+            {' page.'}
+          </Typography>
         </div>
       </div>
 
@@ -294,8 +298,11 @@ function Faqs() {
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
             © {currentYear} Naissus LLC
        </Typography>
+          <Box mt={2} align="center">
+            <img src={footerlogo} alt="logo" className={classes.footerlogo} />
+          </Box>
         </Container>
-        <Box mt={5}>
+        <Box mt={3}>
           <Typography variant="body2" color="textSecondary" align="center">
             {'Developed by Bojan & Veselin.'}
           </Typography>
