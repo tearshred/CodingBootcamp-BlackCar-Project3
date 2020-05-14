@@ -14,12 +14,14 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import MailIcon from '@material-ui/icons/Mail';
 import CardIcon from '@material-ui/icons/CreditCard';
 import DescriptionIcon from '@material-ui/icons/Description';
+import AppIcon from '@material-ui/icons/PhonelinkSetup';
 
 const useStyles = makeStyles({
     list: {
         width: 240,
     },
 });
+
 function ListItemLink(props) {
     return <ListItem style={{ padding: 0 }} button component="a" {...props} />;
 }
@@ -65,6 +67,14 @@ function Drawer() {
                 </ListItemLink>
             </List>
             <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
+                <ListItemLink href="/faqs">
+                    <ListItem button>
+                        <ListItemIcon>{<DescriptionIcon />}</ListItemIcon>
+                        <ListItemText primary="FAQ" />
+                    </ListItem>
+                </ListItemLink>
+            </List>
+            <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
                 <ListItemLink href="/contact">
                     <ListItem button>
                         <ListItemIcon>{<MailIcon />}</ListItemIcon>
@@ -73,18 +83,18 @@ function Drawer() {
                 </ListItemLink>
             </List>
             <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
-                <ListItemLink href="/booking">
-                    <ListItem button >
-                        <ListItemIcon>{<CardIcon />}</ListItemIcon>
-                        <ListItemText href="/booking" primary="Booking Form" />
+                <ListItemLink href="/app">
+                    <ListItem button>
+                        <ListItemIcon>{<AppIcon />}</ListItemIcon>
+                        <ListItemText primary="Booking App" />
                     </ListItem>
                 </ListItemLink>
             </List>
             <List style={{ paddingBottom: '4px', paddingTop: '4px' }}>
-                <ListItemLink href="/faqs">
-                    <ListItem button>
-                        <ListItemIcon>{<DescriptionIcon />}</ListItemIcon>
-                        <ListItemText primary="FAQ" />
+                <ListItemLink href="/booking">
+                    <ListItem button >
+                        <ListItemIcon>{<CardIcon />}</ListItemIcon>
+                        <ListItemText primary="Booking Form" />
                     </ListItem>
                 </ListItemLink>
             </List>

@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
         borderTop: `2px solid ${theme.palette.divider}`,
         marginTop: theme.spacing(4),
+        marginBottom: theme.spacing(2),
         padding: theme.spacing(6, 0),
     },
     footerlogo: {
@@ -327,16 +328,19 @@ function Terms() {
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p" paragraph>
                     For all online reservations 18% gratuity will be added to the final amount.
                 </Typography>
-                <Typography align="left" variant="subtitle1" color="textPrimary" component="p" gutterBottom>
+                <Typography id="privacy" align="left" variant="h5" color="textPrimary" component="p" gutterBottom>
                     Privacy Policy
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
                     We are committed to protecting your privacy. We use the information you provide to secure your reservation. In order to take a ride, you need to provide a pick-up address, drop-off address, valid email address, phone number, and credit card information.
                     In order to set up an account, you need to provide a valid email address, full name, phone number and password. We may need to store encrypted credit card information and use it for both billing and payment purposes.
                 </Typography>
-                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" paragraph>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
                     We do not sell, trade, or rent your personal information to others. At some point in the future, we may use the information we collect to occasionally notify you about important functionality changes to the Web site, new services, and special offers we think you’ll find valuable.
                     If we do so, you’ll be provided an opportunity to unsubscribe from this mailing list.
+                </Typography>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" paragraph>
+                    Last update: May 15th, 2020.
                 </Typography>
             </div>
 
@@ -356,11 +360,6 @@ function Terms() {
                         <img src={footerlogo} alt="logo" className={classes.footerlogo} />
                     </Box>
                 </Container>
-                <Box mt={3}>
-                    <Typography variant="body2" color="textSecondary" align="center">
-                        {'Developed by Bojan & Veselin.'}
-                    </Typography>
-                </Box>
             </footer>
             {/* End footer */}
         </React.Fragment>
