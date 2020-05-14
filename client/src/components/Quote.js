@@ -90,7 +90,6 @@ class Quote extends React.Component {
                 // Creates an API call for sedan pricing
                 API.getPrice(this.state.zipCode, "sedan" + this.state.destination).then(res => {
                     let price = res.data;
-
                     let key = Object.keys(price);
                     console.log("Sedan price is $" + price[key]);
                     this.setState({sedanPrice: price[key]});
@@ -100,7 +99,6 @@ class Quote extends React.Component {
                 // Creates an API call for SUV pricing
                 API.getPrice(this.state.zipCode, "suv" + this.state.destination).then(res => {
                     let price = res.data;
-
                     let key = Object.keys(price);
                     console.log("SUV price is $" + price[key])
                     this.setState({suvPrice: price[key]});
@@ -119,6 +117,8 @@ class Quote extends React.Component {
     handleBack = () => {
         this.setState(state => ({
             activeStep: state.activeStep - 1,
+            sedanPrice: '',
+            suvPrice: '',
         }));
     };
 

@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
 import ContactHero from '../components/ContactHero';
 import banner from './assets/images/banner_main.png';
 import city from './assets/images/city-24px.svg';
@@ -100,6 +101,7 @@ const useStyles = makeStyles(theme => ({
     borderTop: `2px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(4),
     padding: theme.spacing(6, 0),
+    marginBottom: theme.spacing(2),
   },
   footerlogo: {
     maxWidth: 330,
@@ -227,17 +229,12 @@ export default function Home() {
             Phone: (619) 254-9269  |  Location: La Jolla, CA 92037
           </Typography>
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            © {currentYear} Naissus LLC
+            <Link href="/terms" title="Terms">Terms </Link><Link href="/terms#privacy" title="Privacy"> Privacy </Link> © {currentYear} Naissus LLC
           </Typography>
           <Box mt={2} align="center">
           <img src={footerlogo} alt="logo"  className={classes.footerlogo} />
           </Box>
         </Container>
-        <Box mt={3}>
-          <Typography variant="body2" color="textSecondary" align="center">
-            {'Developed by Bojan & Veselin.'}
-          </Typography>
-        </Box>
       </footer>
       {/* End footer */}
     </React.Fragment>

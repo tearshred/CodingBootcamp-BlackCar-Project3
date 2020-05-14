@@ -11,6 +11,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 import image01 from '../pages/assets/images/driver-openning-door.jpg';
 import image02 from '../pages/assets/images/aircraft-suburban-cropped.jpg';
+import image03 from '../pages/assets/images/person-holding-phone-edited.jpg';
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   cardMedia: {
-    height: 180,
+    height: 220,
   },
 }));
 
@@ -44,13 +45,12 @@ export default function CardHero() {
     <React.Fragment>
       <CssBaseline />
       <div className={classes.heroContent}>
-        <Container maxWidth="sm">
+        <Container maxWidth="lg">
           <Typography component="h1" variant="h3" align="center" color="textPrimary" gutterBottom>
             Why Book With Us?
             </Typography>
           <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-            entirely.
+            Commitment to quality transportation service meeting the individual needs of every customer
             </Typography>
         </Container>
       </div>
@@ -67,12 +67,18 @@ export default function CardHero() {
                     <Typography component="h2" variant="h5" gutterBottom>
                       Safety
                     </Typography>
-                    <Typography variant="subtitle1" color="textSecondary" paragraph>
+                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
                       Your safety comes first.
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
                       Our professional chauffeurs are fully licensed, insured, and background checked.
+                      Our clean and safe vehicles go thru daily vehicle preparation and preventive maintenance.
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary" paragraph>
+                      Learn more about what we are doing in response to the COVID-19 pandemic.
                     </Typography>
                     <Typography variant="subtitle1" color="primary">
-                      Continue reading...
+                      Learn more...
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -90,9 +96,15 @@ export default function CardHero() {
                     <Typography component="h2" variant="h5" gutterBottom>
                       On Time
                     </Typography>
-                    <Typography variant="subtitle1" color="textSecondary" paragraph>
+                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
                       We're on time when you need it.
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
                       Enjoy a stress free ride to the airport or a business meeting.
+                      Our attention to detail gives you confidence that your transportation needs will be handled in a timely and proffesional matter.
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary" paragraph>
+                      On time, Every time!
                     </Typography>
                     <Typography variant="subtitle1" color="primary">
                       BOOK NOW
@@ -106,16 +118,22 @@ export default function CardHero() {
             <Card className={classes.card}>
               <div className={classes.cardDetails}>
                 <Hidden xsDown>
-                  <CardMedia className={classes.cardMedia} image={image02} />
+                  <CardMedia className={classes.cardMedia} image={image03} />
                 </Hidden>
                 <CardActionArea component="a" href="/">
                   <CardContent className={classes.cardContent}>
                     <Typography component="h2" variant="h5" gutterBottom>
                       Flexible Booking
                     </Typography>
-                    <Typography variant="subtitle1" color="textSecondary" paragraph>
-                      Yes, we have an app!
+                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                      Yes, We have an App!
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
                       Rides can now be booked through our app available on iOS and Android devices.
+                      Get detailed information about your driver and track the exact location of your car in real-time.
+                      </Typography>
+                    <Typography variant="subtitle1" color="textSecondary" paragraph>
+                      Your upfront all-inclusive rate will include all taxes, fees, and gratuities. No hidden fees.
                     </Typography>
                     <Typography variant="subtitle1" color="primary">
                       Learn more...

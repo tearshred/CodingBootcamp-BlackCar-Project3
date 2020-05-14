@@ -34,6 +34,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     borderTop: `2px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(2),
     padding: theme.spacing(6, 0),
   },
   footerlogo: {
@@ -302,11 +303,6 @@ function Faqs() {
             <img src={footerlogo} alt="logo" className={classes.footerlogo} />
           </Box>
         </Container>
-        <Box mt={3}>
-          <Typography variant="body2" color="textSecondary" align="center">
-            {'Developed by Bojan & Veselin.'}
-          </Typography>
-        </Box>
       </footer>
       {/* End footer */}
     </React.Fragment>

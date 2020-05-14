@@ -11,7 +11,7 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop: theme.spacing(12),
+        marginTop: theme.spacing(14),
         marginBottom: theme.spacing(5),
     },
     button: {

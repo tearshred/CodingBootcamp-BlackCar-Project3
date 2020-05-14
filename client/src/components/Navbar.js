@@ -64,11 +64,14 @@ export default function Navbar() {
             <Link variant="button" color="textPrimary" href="/#services" className={classes.link}>
               Services
             </Link>
+            <Link variant="button" color="textPrimary" href="/faqs" className={classes.link}>
+              Faq
+            </Link>
             <Link variant="button" color="textPrimary" href="/contact" className={classes.link}>
               Contact
             </Link>
-            <Link variant="button" color="textPrimary" href="/faqs" className={classes.link}>
-              Faq
+            <Link variant="button" color="textPrimary" href="/app" className={classes.link}>
+              App
             </Link>
           </nav>
           </Hidden>
