@@ -1,11 +1,9 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import StopIcon from '@material-ui/icons/Stop';
 import Link from '@material-ui/core/Link';
-import footerlogo from '../pages/assets/images/LogoCropped.png';
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,28 +18,10 @@ const useStyles = makeStyles(theme => ({
     title: {
         paddingBottom: '35px',
     },
-    heading: {
-        fontSize: theme.typography.pxToRem(20),
-        fontWeight: theme.typography.fontWeightRegular,
-    },
-    subheader: {
-        paddingTop: '20px',
-    },
-    footer: {
-        backgroundColor: theme.palette.background.paper,
-        borderTop: `2px solid ${theme.palette.divider}`,
-        marginTop: theme.spacing(4),
-        marginBottom: theme.spacing(2),
-        padding: theme.spacing(6, 0),
-    },
-    footerlogo: {
-        maxWidth: 330,
-    },
 }));
 
 function Terms() {
     const classes = useStyles();
-    const currentYear = new Date().getFullYear();
 
     return (
         <React.Fragment>
@@ -344,24 +324,8 @@ function Terms() {
                 </Typography>
             </div>
 
-            {/* Footer */}
-            <footer className={classes.footer}>
-                <Container maxWidth="lg">
-                    <Typography variant="h5" align="center" gutterBottom>
-                        San Diego Executive Transportation
-                    </Typography>
-                    <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                        Phone: (619) 254-9269  |  Location: La Jolla, CA 92037
-                    </Typography>
-                    <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                        © {currentYear} Naissus LLC
-                    </Typography>
-                    <Box mt={2} align="center">
-                        <img src={footerlogo} alt="logo" className={classes.footerlogo} />
-                    </Box>
-                </Container>
-            </footer>
-            {/* End footer */}
+            <Footer />
+
         </React.Fragment>
     );
 }

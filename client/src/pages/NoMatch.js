@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     container: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(12),
         marginBottom: theme.spacing(8),
         position: 'relative',
         display: 'flex',
@@ -24,7 +24,7 @@ export default function NoMatch() {
 
     return (
         <Container className={classes.container}>
-            <Typography variant="h4" align="center" color="textPrimary" component="p">
+            <Typography variant="h3" align="center" color="textPrimary" component="p">
             404 Page Not Found
             </Typography>
         </Container>

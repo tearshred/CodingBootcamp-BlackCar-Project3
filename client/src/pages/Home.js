@@ -6,16 +6,14 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
 import ContactHero from '../components/ContactHero';
 import banner from './assets/images/banner_main.png';
 import city from './assets/images/city-24px.svg';
 import airplane from './assets/images/airplane-24px.svg';
 import clock from './assets/images/clock-24px.svg';
-import footerlogo from '../pages/assets/images/LogoCropped.png';
 import Quote from '../components/Quote';
 import CardHero from '../components/CardHero';
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -96,22 +94,11 @@ const useStyles = makeStyles(theme => ({
       borderRadius: 4,
     },
   },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    borderTop: `2px solid ${theme.palette.divider}`,
-    marginTop: theme.spacing(4),
-    padding: theme.spacing(6, 0),
-    marginBottom: theme.spacing(2),
-  },
-  footerlogo: {
-    maxWidth: 330,
-  },
 }));
 
 
 export default function Home() {
   const classes = useStyles();
-  const currentYear = new Date().getFullYear();
 
   return (
     <React.Fragment>
@@ -218,25 +205,8 @@ export default function Home() {
 
       <CardHero />
       <ContactHero />
+      <Footer />
 
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Container maxWidth="lg">
-          <Typography variant="h5" align="center" gutterBottom>
-            San Diego Executive Transportation
-          </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Phone: (619) 254-9269  |  Location: La Jolla, CA 92037
-          </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            <Link href="/terms" title="Terms">Terms </Link><Link href="/terms#privacy" title="Privacy"> Privacy </Link> © {currentYear} Naissus LLC
-          </Typography>
-          <Box mt={2} align="center">
-          <img src={footerlogo} alt="logo"  className={classes.footerlogo} />
-          </Box>
-        </Container>
-      </footer>
-      {/* End footer */}
     </React.Fragment>
   );
 }

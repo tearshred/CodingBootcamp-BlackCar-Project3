@@ -62,7 +62,7 @@ export default function CardHero() {
                 <Hidden xsDown>
                   <CardMedia className={classes.cardMedia} image={image01} />
                 </Hidden>
-                <CardActionArea component="a" href="/">
+                <CardActionArea component="a" href="/safety">
                   <CardContent className={classes.cardContent}>
                     <Typography component="h2" variant="h5" gutterBottom>
                       Safety
@@ -120,7 +120,7 @@ export default function CardHero() {
                 <Hidden xsDown>
                   <CardMedia className={classes.cardMedia} image={image03} />
                 </Hidden>
-                <CardActionArea component="a" href="/">
+                <CardActionArea component="a" href="/app">
                   <CardContent className={classes.cardContent}>
                     <Typography component="h2" variant="h5" gutterBottom>
                       Flexible Booking
