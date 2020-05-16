@@ -5,10 +5,8 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
-import footerlogo from '../pages/assets/images/LogoCropped.png';
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,21 +28,10 @@ const useStyles = makeStyles(theme => ({
   subheader: {
     paddingTop: '40px',
   },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    borderTop: `2px solid ${theme.palette.divider}`,
-    marginTop: theme.spacing(4),
-    marginBottom: theme.spacing(2),
-    padding: theme.spacing(6, 0),
-  },
-  footerlogo: {
-    maxWidth: 330,
-  },
 }));
 
 function Faqs() {
   const classes = useStyles();
-  const currentYear = new Date().getFullYear();
 
   return (
     <React.Fragment>
@@ -125,7 +112,7 @@ function Faqs() {
               Hourly service is available for bookings of 2 hours or more. During your reserved block of time,
               you will be assigned a designated vehicle and a private chauffeur exclusively for you and your party.
               With this service, you can make as many stops as needed and for as long as you want.
-              <br />
+              <br /><br />
               Please note that hourly charters can't be used when booking one way out-of-county rides.
           </Typography>
           </ExpansionPanelDetails>
@@ -287,24 +274,8 @@ function Faqs() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Container maxWidth="lg">
-          <Typography variant="h5" align="center" gutterBottom>
-            San Diego Executive Transportation
-       </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Phone: (619) 254-9269  |  Location: La Jolla, CA 92037
-       </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            © {currentYear} Naissus LLC
-       </Typography>
-          <Box mt={2} align="center">
-            <img src={footerlogo} alt="logo" className={classes.footerlogo} />
-          </Box>
-        </Container>
-      </footer>
-      {/* End footer */}
+      <Footer />
+
     </React.Fragment>
   );
 }

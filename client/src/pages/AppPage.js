@@ -1,13 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ContactHero from '../components/ContactHero';
+import Footer from '../components/Footer';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Hidden from '@material-ui/core/Hidden';
-import phone from '../pages/assets/images/person-holding-phone-edited.jpg';
+import phone from '../pages/assets/images/person-holding-phone-cropped.jpg';
 import AppleBadge from '../pages/assets/images/App_Store_Badge.svg';
 import GoogleBadge from '../pages/assets/images/google-play-badge.png';
 
@@ -119,6 +120,7 @@ export default function AppPage() {
             </Container>
 
             <ContactHero />
+            <Footer />
 
         </React.Fragment>
     );
