@@ -308,19 +308,38 @@ function Terms() {
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p" paragraph>
                     For all online reservations 18% gratuity will be added to the final amount.
                 </Typography>
-                <Typography id="privacy" align="left" variant="h5" color="textPrimary" component="p" gutterBottom>
+                <Typography id="privacy" align="left" variant="h5" color="textPrimary" component="p" paragraph>
                     Privacy Policy
                 </Typography>
-                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
-                    We are committed to protecting your privacy. We use the information you provide to secure your reservation. In order to take a ride, you need to provide a pick-up address, drop-off address, valid email address, phone number, and credit card information.
-                    In order to set up an account, you need to provide a valid email address, full name, phone number and password. We may need to store encrypted credit card information and use it for both billing and payment purposes.
-                </Typography>
-                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
-                    We do not sell, trade, or rent your personal information to others. At some point in the future, we may use the information we collect to occasionally notify you about important functionality changes to the Web site, new services, and special offers we think you’ll find valuable.
-                    If we do so, you’ll be provided an opportunity to unsubscribe from this mailing list.
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" paragraph>
+                    We are committed to protecting your privacy. We want you to feel comfortable and confident when using our website, online reservation management system, and mobile application. 
+                    This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use our services. By visiting our website and purchasing our services, you are agreeing to our Terms and confirming that you have read and understood this policy, including how and why we use your information.
                 </Typography>
                 <Typography align="left" variant="subtitle1" color="textSecondary" component="p" paragraph>
-                    Last update: May 15th, 2020.
+                    We do not sell, trade, or rent your personal information to others. We need to process your personal information in order to provide our services. 
+                    We use the information you provide to secure your reservation. In order to take a ride, you need to provide a pick-up address, drop-off address, valid email address, phone number, and credit card information.
+                    In order to set up an account, you need to provide a valid email address, full name, phone number, and password. We may need to store encrypted credit card information and use it for both billing and payment purposes.
+                    Your account information is protected by a password. It is important that you protect against unauthorized access to your account and information by choosing your password carefully and by keeping your password and computer secure.
+                </Typography>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
+                    You agree that we can send you service-related communications, such as those related to rides, transactions, or your account. 
+                    At some point in the future, we may use the information we collect to occasionally notify you about important functionality changes to the Web site, new services, and special offers we think you’ll find valuable.
+                    If we do so, you’ll be provided an opportunity to unsubscribe from this mailing list.
+                </Typography>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
+                    Our services are not designed to appeal to children under the age of 13. We do not knowingly request or receive any information from children.
+                </Typography>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
+                    Because we do not track our customers over time and across third-party websites, we do not respond to browser Do-Not-Track signals.
+                </Typography>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
+                    We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+                </Typography>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" gutterBottom>
+                    If you have questions or require more information about our Privacy Policy, do not hesitate to call or email us.
+                </Typography>
+                <Typography align="left" variant="subtitle1" color="textSecondary" component="p" paragraph>
+                    Last update: May 16th, 2020.
                 </Typography>
             </div>
 
