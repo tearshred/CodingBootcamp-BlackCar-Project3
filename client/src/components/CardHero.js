@@ -8,7 +8,6 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Hidden from '@material-ui/core/Hidden';
 import image01 from '../pages/assets/images/driver-openning-door.jpg';
 import image02 from '../pages/assets/images/aircraft-suburban-cropped.jpg';
 import image03 from '../pages/assets/images/person-holding-phone-edited.jpg';
@@ -59,9 +58,7 @@ export default function CardHero() {
           <Grid item xs={12} sm={6} md={4}>
             <Card className={classes.card}>
               <div className={classes.cardDetails}>
-                <Hidden xsDown>
-                  <CardMedia className={classes.cardMedia} image={image01} />
-                </Hidden>
+                <CardMedia className={classes.cardMedia} image={image01} />
                 <CardActionArea component="a" href="/safety">
                   <CardContent className={classes.cardContent}>
                     <Typography component="h2" variant="h5" gutterBottom>
@@ -88,9 +85,7 @@ export default function CardHero() {
           <Grid item xs={12} sm={6} md={4}>
             <Card className={classes.card}>
               <div className={classes.cardDetails}>
-                <Hidden xsDown>
-                  <CardMedia className={classes.cardMedia} image={image02} />
-                </Hidden>
+                <CardMedia className={classes.cardMedia} image={image02} />
                 <CardActionArea component="a" href="/booking">
                   <CardContent className={classes.cardContent}>
                     <Typography component="h2" variant="h5" gutterBottom>
@@ -117,9 +112,7 @@ export default function CardHero() {
           <Grid item xs={12} sm={6} md={4}>
             <Card className={classes.card}>
               <div className={classes.cardDetails}>
-                <Hidden xsDown>
-                  <CardMedia className={classes.cardMedia} image={image03} />
-                </Hidden>
+                <CardMedia className={classes.cardMedia} image={image03} />
                 <CardActionArea component="a" href="/app">
                   <CardContent className={classes.cardContent}>
                     <Typography component="h2" variant="h5" gutterBottom>

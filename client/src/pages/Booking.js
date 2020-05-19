@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
-class Booking extends Component {
+class Booking extends React.Component {
 
   componentWillMount () {
     const script = document.createElement("script");
@@ -19,11 +19,13 @@ class Booking extends Component {
       <div>
         <a href={"https://book.mylimobiz.com/v4/naissus"} data-ores-widget={"website"} data-ores-alias={"naissus"}>Online Reservations</a>
       </div>
-      <Typography align='center' variant="subtitle1" paragraph>
-          <Link href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html" title="CDC recommendation">
-            CDC recommends riders to wear a cloth face covering when using vehicle-for-hire transportation services
+      <br/>
+      <Typography align='center' variant="subtitle2" paragraph>
+          <Link href="/safety" title="Safety">
+            What We're Doing to Ensure Your Safety and Ours?
           </Link>
       </Typography>
+      <br/>
       </React.Fragment>
     );
   }
