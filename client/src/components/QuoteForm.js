@@ -8,6 +8,8 @@ import Input from '@material-ui/core/Input';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import FormHelperText from '@material-ui/core/FormHelperText';
+
 
 const styles = theme => ({
     root: {
@@ -37,7 +39,7 @@ export class QuoteForm extends React.Component {
     }
 
     render() {
-
+        
         const { classes } = this.props;
 
         return (
@@ -56,10 +58,17 @@ export class QuoteForm extends React.Component {
                             autoComplete="billing postal-code"
                             value={this.props.zipCode}
                             onChange={this.props.handleChange}
+                            error={this.props.error}
+                            helperText={
+                                this.props.errorMessage.zipCode &&
+                                this.props.errorMessage.zipCode
+                            }
                         />
                     </Grid>
-                    <FormControl xs={12} sm={6} className={classes.formControl}>
+                    <FormControl xs={12} sm={6} className={classes.formControl} error={this.props.error}>
                         <Select
+                            error={this.props.error}
+                            label="enter cor dest"
                             required
                             value={this.props.destination}
                             onChange={this.props.handleChange}
@@ -74,6 +83,9 @@ export class QuoteForm extends React.Component {
                             <MenuItem name="SAN" value={"SAN"}>San Diego International Airport</MenuItem>
                             <MenuItem name="LAX" value={"LAX"}>Los Angeles International Airport</MenuItem>
                         </Select>
+                        <FormHelperText>
+                            {this.props.errorMessage.destination}
+                        </FormHelperText>
                     </FormControl>
                 </Grid>
             </React.Fragment>

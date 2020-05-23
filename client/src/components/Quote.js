@@ -53,6 +53,8 @@ class Quote extends React.Component {
         sedanPrice: '',
         suvPrice: '',
         labelWidth: 0,
+        error: false,
+        errorMessage: {}
     };
 
     getStepContent = (step) => {
@@ -70,7 +72,7 @@ class Quote extends React.Component {
             case 1:
                 return (
                     <div>
-                        <QuotePrice 
+                        <QuotePrice
                             {...this.state}
                             {...this.state.value}
                         />
@@ -82,34 +84,59 @@ class Quote extends React.Component {
     }
 
     handleNext = () => {
-        this.setState(prevState => ({
-            activeStep: prevState.activeStep + 1,
-        }));
-        switch(this.state.activeStep){
-            case 0: 
+        let isError = false;
+        if (this.state.zipCode.length < 5 || this.state.zipCode < 90900 || this.state.zipCode > 92596) {
+            isError = true;
+            this.setState({
+                error: true,
+                errorMessage: { zipCode: "Please enter correct zipcode" }
+            });
+        }
+        if (this.state.destination === "") {
+            isError = true;
+            this.setState(prev => ({
+                ...prev,
+                error: true,
+                errorMessage: {
+                    ...prev.errorMessage,
+                    destination: "Please select your destination"
+                }
+            }));
+        }
+        if (!isError) {
+            //add else if for validating other fields (if any)
+            this.setState(prevState => ({
+                activeStep: prevState.activeStep + 1,
+                error: false,
+                errorMessage: {}
+            }));
+        }
+
+        switch (this.state.activeStep) {
+            case 0:
                 // Creates an API call for sedan pricing
                 API.getPrice(this.state.zipCode, "sedan" + this.state.destination).then(res => {
                     let price = res.data;
                     let key = Object.keys(price);
                     console.log("Sedan price is $" + price[key]);
-                    this.setState({sedanPrice: price[key]});
+                    this.setState({ sedanPrice: price[key] });
                 })
-                .catch(err => console.log(err));
+                    .catch(err => console.log(err));
 
                 // Creates an API call for SUV pricing
                 API.getPrice(this.state.zipCode, "suv" + this.state.destination).then(res => {
                     let price = res.data;
                     let key = Object.keys(price);
                     console.log("SUV price is $" + price[key])
-                    this.setState({suvPrice: price[key]});
+                    this.setState({ suvPrice: price[key] });
                 })
-                .catch(err => console.log(err));
-            break
+                    .catch(err => console.log(err));
+                break
             case 1:
                 console.log('forward to booking page');
                 window.location.href = '/booking';
-            break
-            default: 
+                break
+            default:
                 console.log('over');
         }
     };
@@ -129,13 +156,12 @@ class Quote extends React.Component {
     };
 
     handleChange = event => {
-        console.log('this is working')
         const { name, value } = event.target;
         this.setState({
             [name]: value,
         });
     };
-    
+
     render() {
         const { classes } = this.props;
         const { activeStep } = this.state;
@@ -153,25 +179,25 @@ class Quote extends React.Component {
                                         Thank you for your interest!
                                     </Typography>
                                 </React.Fragment>
-                                ) : (
-                                <React.Fragment>
-                                    {this.getStepContent(activeStep)}
-                                    <div className={classes.buttons}>
-                                        {activeStep !== 0 && (
-                                            <Button onClick={this.handleBack} className={classes.button}>
-                                                Back
+                            ) : (
+                                    <React.Fragment>
+                                        {this.getStepContent(activeStep)}
+                                        <div className={classes.buttons}>
+                                            {activeStep !== 0 && (
+                                                <Button onClick={this.handleBack} className={classes.button}>
+                                                    Back
+                                                </Button>
+                                            )}
+                                            <Button
+                                                variant="contained"
+                                                color="primary"
+                                                onClick={this.handleNext}
+                                                className={classes.button}
+                                            >
+                                                {activeStep === steps.length - 1 ? 'Book Now' : 'Next'}
                                             </Button>
-                                        )}
-                                        <Button
-                                            variant="contained"
-                                            color="primary"
-                                            onClick={this.handleNext}
-                                            className={classes.button}
-                                        >
-                                            {activeStep === steps.length - 1 ? 'Book Now' : 'Next'}
-                                        </Button>
-                                    </div>
-                                </React.Fragment>
+                                        </div>
+                                    </React.Fragment>
                                 )}
                         </React.Fragment>
                     </Paper>
