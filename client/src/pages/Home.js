@@ -39,10 +39,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     justifyContent: 'auto',
     padding: theme.spacing(3),
-    marginTop: '-220px',
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(4),
-    },
+    marginTop: '-240px',
     [theme.breakpoints.down('sm')]: {
       marginTop: '-120px',
     },

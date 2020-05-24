@@ -30,7 +30,7 @@ const styles = theme => ({
         padding: theme.spacing(1),
         backgroundColor: theme.palette.grey[200],
         [theme.breakpoints.up(600 + theme.spacing(3))]: {
-            marginTop: theme.spacing(3),
+            marginTop: theme.spacing(3.5),
             padding: theme.spacing(2),
         },
     },
@@ -39,7 +39,6 @@ const styles = theme => ({
         justifyContent: 'flex-end',
     },
     button: {
-        marginTop: theme.spacing(0.5),
         marginLeft: theme.spacing(1),
         marginRight: theme.spacing(1),
     },
@@ -85,7 +84,7 @@ class Quote extends React.Component {
 
     handleNext = () => {
         let isError = false;
-        if (this.state.zipCode.length < 5 || this.state.zipCode < 90900 || this.state.zipCode > 92596) {
+        if (this.state.zipCode < 91901 || this.state.zipCode > 92596) {
             isError = true;
             this.setState({
                 error: true,
@@ -104,7 +103,6 @@ class Quote extends React.Component {
             }));
         }
         if (!isError) {
-            //add else if for validating other fields (if any)
             this.setState(prevState => ({
                 activeStep: prevState.activeStep + 1,
                 error: false,

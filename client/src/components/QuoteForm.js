@@ -17,8 +17,8 @@ const styles = theme => ({
         flexWrap: 'wrap',
     },
     formControl: {
-        margin: theme.spacing(1),
-        width: 260,
+        margin: theme.spacing(0.5),
+        width: 268,
         textAlign: 'left',
     },
     selectEmpty: {
@@ -26,9 +26,12 @@ const styles = theme => ({
         paddingTop: 4,
     },
     TextField: {
-        padding: 8,
+        padding: 4,
         maxWidth: 276,
     },
+    title: {
+        marginTop: theme.spacing(0.5)
+    }
 });
 
 export class QuoteForm extends React.Component {
@@ -44,7 +47,7 @@ export class QuoteForm extends React.Component {
 
         return (
             <React.Fragment>
-                <Typography variant="h5" align="center">
+                <Typography variant="h5" align="center" className={classes.title}>
                     Enter your zip code for a quick quote
                 </Typography>
                 <Grid container>
