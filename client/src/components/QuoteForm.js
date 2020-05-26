@@ -56,7 +56,9 @@ export class QuoteForm extends React.Component {
                             required
                             id="zip"
                             name="zipCode"
-                            label="Zip / Postal code"
+                            type="number"
+                            InputLabelProps={{ shrink: true }}
+                            label="ZIP / Postal code"
                             fullWidth
                             autoComplete="billing postal-code"
                             value={this.props.zipCode}

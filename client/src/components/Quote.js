@@ -95,11 +95,17 @@ class Quote extends React.Component {
 
     handleNext = () => {
         let isError = false;
-        if (!zipCodeList.includes(this.state.zipCode)) {
+        if (this.state.zipCode.length !== 5) {
             isError = true;
             this.setState({
                 error: true,
-                errorMessage: { zipCode: "Please enter correct zipcode" }
+                errorMessage: { zipCode: "Please enter a valid ZIP code" }
+            });
+        } else if (!zipCodeList.includes(this.state.zipCode)) {
+            isError = true;
+            this.setState({
+                error: true,
+                errorMessage: { zipCode: "Not found in our pricelist. Email us for a quote." }
             });
         }
         if (this.state.destination === "") {
